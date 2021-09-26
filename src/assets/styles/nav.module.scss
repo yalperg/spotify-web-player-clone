@@ -1,0 +1,27 @@
+@import 'variables.scss';
+
+.nav {
+  color: $secondary-text-color;
+
+  .active {
+    color: $primary-text-color;
+    background-color: $active-link-bg;
+  }
+
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      height: 2.5rem;
+      border-radius: 5px;
+      color: inherit;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+
+      span {
+        margin-right: .9rem;
+      }
+    }
+  }
+}
