@@ -1,9 +1,9 @@
 @import 'variables.scss';
 
 .sidebar {
-  width: 14rem;
+  width: 15rem;
   height: 53rem;
-  padding: 1.5rem 1rem 0 1rem;
+  padding: 1.5rem .5rem 0 .5rem;
   background-color: $sidebar-bg;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,7 @@
 .logo {
   width: 15rem;
   height: 2.6rem;
+  margin-left: .9rem;
   margin-bottom: 1.5rem;
 
   img {
