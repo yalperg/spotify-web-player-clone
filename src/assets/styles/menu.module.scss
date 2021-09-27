@@ -16,10 +16,10 @@
         text-decoration: none;
         font-size: 14px;
         font-weight: 700;
-        padding-left: .9rem;
-  
+        padding-left: 0.9rem;
+
         span {
-          margin-right: .9rem;
+          margin-right: 0.9rem;
           height: 24px;
           width: 24px;
           display: flex;
@@ -32,8 +32,8 @@
           }
 
           &.heart {
-            background-image: linear-gradient(to right bottom, #4013B9, #7B9187);   
-            opacity: 70%;
+            background-image: linear-gradient(135deg, #450af5, #c4efd9);
+            opacity: 80%;
           }
         }
 
@@ -51,7 +51,7 @@
           }
         }
       }
-  
+
       &:hover {
         a {
           color: $primary-color;
@@ -72,11 +72,6 @@
 }
 
 .border {
-  margin: 0 .9rem;
+  margin: 0 0.9rem;
   border-bottom: 1px solid $third-color;
 }
-
-
-
-
-
