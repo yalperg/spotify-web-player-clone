@@ -3,6 +3,7 @@ import logo from 'assets/images/logo.svg'
 import styles from 'assets/styles/sidebar.module.scss'
 
 import Navigation from 'components/sidebar/navigation'
+import Menu from 'components/sidebar/menu'
 
 const Sidebar = () => {
   return (
@@ -14,6 +15,7 @@ const Sidebar = () => {
       }
 
       <Navigation />
+      <Menu />
     </div>
   )
 }

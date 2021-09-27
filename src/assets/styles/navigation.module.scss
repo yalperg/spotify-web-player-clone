@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 .nav {
-  color: $secondary-text-color;
+  color: $secondary-color;
 
   ul {
     margin-bottom: 1.5rem;
@@ -23,14 +23,14 @@
         }
 
         &.active {
-          color: $primary-text-color;
-          background-color: $active-link-bg;
+          color: $primary-color;
+          background-color: $third-color;
         }
       }
 
       &:hover {
         a {
-          color: $primary-text-color;
+          color: $primary-color;
         }
       }
     }
