@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import styles from 'assets/styles/nav.module.scss'
+import styles from 'assets/styles/navigation.module.scss'
 import {
   HomeIcon,
   HomeIconActive,
@@ -10,7 +10,7 @@ import {
   CollectionIconActive,
 } from 'assets/icons/icons'
 
-const Nav = () => {
+const Navigation = () => {
   const [activeIcon, setActiveIcon] = useState(0)
 
   return (
@@ -62,4 +62,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Navigation
