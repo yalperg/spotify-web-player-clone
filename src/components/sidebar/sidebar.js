@@ -5,6 +5,7 @@ import styles from 'assets/styles/sidebar.module.scss'
 import Navigation from 'components/sidebar/navigation'
 import Menu from 'components/sidebar/menu'
 import Playlists from 'components/sidebar/playlists'
+import DownloadApp from './download'
 
 const Sidebar = () => {
   return (
@@ -18,6 +19,7 @@ const Sidebar = () => {
       <Navigation />
       <Menu />
       <Playlists />
+      <DownloadApp />
     </div>
   )
 }
