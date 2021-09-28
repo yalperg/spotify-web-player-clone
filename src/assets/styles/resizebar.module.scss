@@ -1,0 +1,20 @@
+.resizebar {
+  height: 100%;
+  width: 16.5rem;
+  min-width: 15rem;
+  max-width: 25rem;
+  cursor: col-resize;
+  position: relative;
+  
+  .border {
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    height: 54.5rem;
+    width: .2rem;
+    
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
