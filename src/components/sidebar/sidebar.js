@@ -50,7 +50,7 @@ const Sidebar = () => {
         <DownloadApp />
       </div>
 
-      <div className={styles.resizebar} onMouseDown={downHandler}></div>
+      <div className={`${styles.resizebar} ${isMouseDown ? styles.active : null}`} onMouseDown={downHandler}></div>
     </div>
   )
 }
