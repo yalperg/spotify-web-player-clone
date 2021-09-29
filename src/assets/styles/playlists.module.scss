@@ -25,14 +25,20 @@
 
     li {
       a {
-        display: block;
         line-height: 2rem;
         height: 2rem;
         color: inherit;
         text-decoration: none;
         font-size: 14px;
         padding-left: 0.9rem;
+
+        /* like a text-overflow: ellipsis*/
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
         overflow: hidden;
+        word-break: break-all;
+        white-space: unset;
 
         &.active {
           color: $primary-color;
