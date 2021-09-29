@@ -11,13 +11,13 @@ const Content = () => {
   const ref = useRef()
 
   const scrollHandler = () => {
-    let cord = (ref.current.scrollTop / 187).toFixed(2)
-    cord = Number(cord)
+    let cord = (ref.current.scrollTop / 190).toFixed(2)
 
-    if(cord > 0 && cord <= 1) {
-      setOpacity(cord)
+    if (Number(cord) > 1) {
+      setOpacity(1)
+    } else {
+      setOpacity(Number(cord))
     }
-    
   }
 
   return (
