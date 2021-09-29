@@ -1,9 +1,11 @@
 import { Switch, Route } from "react-router-dom"
 import styles from 'assets/styles/content.module.scss'
+import Header from "components/header"
 
 const Content = () => {
   return ( 
     <div className={styles.content}>
+      <Header />
       <Switch>
         <Route exact path="/">Home</Route>
         <Route  path="/search">Search</Route>
