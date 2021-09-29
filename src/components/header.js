@@ -8,7 +8,7 @@ import {
 } from 'assets/icons/icons'
 import styles from 'assets/styles/header.module.scss'
 
-const Header = () => {
+const Header = ({ opacity }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   const dropdownOpenHandler = () => {
@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} style={{backgroundColor: `rgba(225,225,225,${opacity})`}}>
       <div>
         <button>
           <PreviousIcon />

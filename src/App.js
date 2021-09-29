@@ -3,15 +3,19 @@ import Sidebar from 'components/sidebar/sidebar'
 import Content from 'components/content'
 import Player from 'components/player'
 
+import styles from 'assets/styles/app.module.scss'
+
 function App() {
   return (
-    <Router>
-      <div>
-        <Sidebar />
-        <Content />
-      </div>
-      <Player />
-    </Router>
+    <div className={styles.app}>
+      <Router>
+        <div className={styles.main}>
+          <Sidebar />
+          <Content />
+        </div>
+        <Player />
+      </Router>
+    </div>
   )
 }
 

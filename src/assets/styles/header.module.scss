@@ -6,7 +6,9 @@
   padding: 0 2rem;
   align-items: center;
   height: 3.75rem;
-  background: transparent;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
 
   button {
     display: flex;

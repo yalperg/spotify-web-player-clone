@@ -4,5 +4,20 @@
   width: 100%;
   height: 53rem;
   background: $secondary-bg;
-  color: #fff;
+  color: $primary-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.75rem;
+    min-height: 1.8rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color;
+
+    &:hover {
+      background: $scrollbar-hover-color;
+    }
+  }
 }

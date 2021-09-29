@@ -1,24 +1,24 @@
 @import 'variables.scss';
 
 .nav {
-  margin-top: .8rem;
+  margin-top: 0.8rem;
   color: $secondary-color;
   overflow-x: hidden;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
-    width: .5rem;
+    width: 0.5rem;
     min-height: 1.8rem;
-   }
- 
-   &::-webkit-scrollbar-thumb {
+  }
+
+  &::-webkit-scrollbar-thumb {
     background-color: $scrollbar-color;
     border-radius: 3px;
- 
+
     &:hover {
-     background: $scrollbar-hover-color;
+      background: $scrollbar-hover-color;
     }
-   }
+  }
 
   ul {
     margin-bottom: 1.5rem;
@@ -53,4 +53,3 @@
     }
   }
 }
-
