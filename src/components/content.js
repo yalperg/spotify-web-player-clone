@@ -2,7 +2,7 @@ const Content = () => {
   return ( 
     <div style={{
       width: '100%',
-      height: '54.5rem',
+      height: '53rem',
       background: '#121212'
     }}>
       sa
