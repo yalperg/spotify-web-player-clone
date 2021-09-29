@@ -36,8 +36,8 @@ const Sidebar = () => {
   })
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.sidebar} style={{ width: `${size}px` }}>
+    <div className={styles.sidebar} style={{ width: `${size}px` }}>
+      <div className={styles.wrapper}>
         {
           <Link to='/' className={styles.logo}>
             <img src={logo} alt='logo' />
@@ -49,8 +49,7 @@ const Sidebar = () => {
         <Playlists />
         <DownloadApp />
       </div>
-
-      <div className={`${styles.resizebar} ${isMouseDown ? styles.active : null}`} onMouseDown={downHandler}></div>
+      <div className={`${styles.resizebar} ${isMouseDown ? styles.active : ''}`} onMouseDown={downHandler}></div>
     </div>
   )
 }
