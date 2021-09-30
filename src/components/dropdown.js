@@ -7,10 +7,10 @@ const Dropwdown = () => {
     <div className={styles.dropdown}>
       <ul>
         <li>
-          <Link to='/'>
+          <a href='https://www.spotify.com/us/account/overview/' target='_blank' rel="noreferrer">
             Account 
             <span><ExternalLinkIcon /></span>
-            </Link>
+            </a>
         </li>
         <li>
           <Link to='/'>Profile</Link>
