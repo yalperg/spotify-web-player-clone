@@ -11,6 +11,7 @@ import {
 
 const Navigation = () => {
   const location = useLocation()
+  const collectinPath = location.pathname.replace(/[^/]*$/, '')
 
   return (
     <nav className={styles.nav}>
@@ -36,10 +37,10 @@ const Navigation = () => {
         </li>
         <li>
           <NavLink
-            to='/collection/playlists'
+            to='/collection/'
             activeClassName={styles.active}>
             <span>
-              {location.pathname === '/collection/playlists' ? <CollectionIconActive /> : <CollectionIcon />}
+              {collectinPath === '/collection/' ? <CollectionIconActive /> : <CollectionIcon />}
             </span>
             Your Library
           </NavLink>

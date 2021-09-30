@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import styles from 'assets/styles/content.module.scss'
 import Header from 'components/header'
 
@@ -28,7 +28,9 @@ const Content = () => {
           {text}
         </Route>
         <Route path='/search'>Search</Route>
-        <Route path='/collection/playlists'>Playlists</Route>
+        <Route path='/collection'>
+          <Redirect to='/collection/playlists' />
+        </Route>
         <Route path='/create'>Create</Route>
         <Route path='/collection/tracks'>Liked Songs</Route>
       </Switch>
