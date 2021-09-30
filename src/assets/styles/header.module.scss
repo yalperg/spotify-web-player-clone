@@ -25,10 +25,7 @@
     stroke-width: 1pt;
     cursor: pointer;
     float: left;
-
-    &:hover {
-      background-color: $third-color;
-    }
+    font-weight: 700;
   }
 
   .dropdown {
@@ -39,6 +36,10 @@
     
     span {
       margin: 0 .6rem;
+    }
+
+    &:hover {
+      background-color: $third-color;
     }
   }
 
