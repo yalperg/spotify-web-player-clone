@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import {
   PreviousIcon,
   NextIcon,
@@ -15,10 +15,24 @@ const Header = ({ opacity }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const location = useLocation()
   const collectionPath = location.pathname.replace(/[^/]*$/, '')
+  const dropdownRef = useRef()
 
   const dropdownOpenHandler = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
+
+  useEffect(() => {
+    function outsideClickHandler(event) {
+      if(dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false)
+      }
+    }
+    
+    document.addEventListener('mousedown', outsideClickHandler)
+    return () => {
+      document.removeEventListener('mousedown', outsideClickHandler)
+    }
+  }, [dropdownRef, isDropdownOpen])
 
   return (
     <header
@@ -40,7 +54,7 @@ const Header = ({ opacity }) => {
         <span>Yunus Alper Göl </span>
         {!isDropdownOpen ? <DownIcon /> : <UpIcon />}
       </button>
-      {isDropdownOpen && <Dropwdown />}
+      {isDropdownOpen && <Dropwdown dropdownRef={dropdownRef} />}
     </header>
   )
 }

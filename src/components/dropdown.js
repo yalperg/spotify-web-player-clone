@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import styles from 'assets/styles/dropdown.module.scss'
 import { ExternalLinkIcon } from 'assets/icons/icons'
 
-const Dropwdown = () => {
+const Dropwdown = ({ dropdownRef }) => {
   return ( 
-    <div className={styles.dropdown}>
+    <div ref={dropdownRef} className={styles.dropdown}>
       <ul>
         <li>
           <a href='https://www.spotify.com/us/account/overview/' target='_blank' rel="noreferrer">
