@@ -6,13 +6,16 @@ import Dropwdown from 'components/dropdown'
 import CollectionNav from 'components/header/collection-nav'
 import PreviousBtn from 'components/header/previous-btn'
 import NextBtn from 'components/header/next-btn'
+import SearchBar from 'components/header/search-bar'
 
 const Header = ({ opacity }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const location = useLocation()
-  const collectionPath = location.pathname.replace(/[^/]*$/, '')
   const dropdownRef = useRef()
   const btnRef = useRef()
+
+  const location = useLocation()
+  const collectionPath = location.pathname.replace(/[^/]*$/, '')
+  const searchPath = location.pathname
 
   const dropdownOpenHandler = () => {
     setIsDropdownOpen(!isDropdownOpen)
@@ -43,6 +46,7 @@ const Header = ({ opacity }) => {
         <PreviousBtn />
         <NextBtn />
         {collectionPath === '/collection/' && <CollectionNav />}
+        {searchPath === '/search' && <SearchBar />}
       </div>
       <button
         ref={btnRef}

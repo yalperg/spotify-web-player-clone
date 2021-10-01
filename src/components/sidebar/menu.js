@@ -16,7 +16,7 @@ const Menu = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/collection/tracks' activeClassName={styles.active}>
+          <NavLink to='/tracks' activeClassName={styles.active}>
             <span className={styles.heart}>
               <HeartIcon />
             </span>
