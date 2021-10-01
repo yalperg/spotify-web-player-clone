@@ -41,7 +41,7 @@ const Header = ({ opacity }) => {
   return (
     <header
       className={styles.header}
-      style={{ backgroundColor: `rgba(225,225,225,${opacity})` }}>
+      style={{ backgroundColor: `rgba(57, 54, 57,${opacity})` }}>
       <div className={styles.nav}>
         <PreviousBtn />
         <NextBtn />
