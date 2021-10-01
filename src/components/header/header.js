@@ -1,15 +1,11 @@
 import { useLocation } from 'react-router'
 import { useState, useRef, useEffect } from 'react'
-import {
-  PreviousIcon,
-  NextIcon,
-  DownIcon,
-  UpIcon,
-  UserIcon,
-} from 'assets/icons/icons'
+import { DownIcon, UpIcon, UserIcon } from 'assets/icons/icons'
 import styles from 'assets/styles/header.module.scss'
 import Dropwdown from 'components/dropdown'
-import CollectionNav from 'components/collection-nav'
+import CollectionNav from 'components/header/collection-nav'
+import PreviousBtn from 'components/header/previous-btn'
+import NextBtn from 'components/header/next-btn'
 
 const Header = ({ opacity }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -33,9 +29,9 @@ const Header = ({ opacity }) => {
       }
     }
 
-    document.addEventListener('mouseup', outsideClickHandler)
+    document.addEventListener('mousedown', outsideClickHandler)
     return () => {
-      document.removeEventListener('mouseup', outsideClickHandler)
+      document.removeEventListener('mousedown', outsideClickHandler)
     }
   }, [dropdownRef, isDropdownOpen])
 
@@ -44,12 +40,8 @@ const Header = ({ opacity }) => {
       className={styles.header}
       style={{ backgroundColor: `rgba(225,225,225,${opacity})` }}>
       <div className={styles.nav}>
-        <button>
-          <PreviousIcon />
-        </button>
-        <button>
-          <NextIcon />
-        </button>
+        <PreviousBtn />
+        <NextBtn />
         {collectionPath === '/collection/' && <CollectionNav />}
       </div>
       <button
