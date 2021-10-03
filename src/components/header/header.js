@@ -8,7 +8,9 @@ import PreviousBtn from 'components/header/previous-btn'
 import NextBtn from 'components/header/next-btn'
 import SearchBar from 'components/header/search-bar'
 
-const Header = ({ opacity }) => {
+import hexToRgb from 'functions/hext-to-rgb'
+
+const Header = ({ opacity, bgColor }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef()
   const btnRef = useRef()
@@ -16,6 +18,9 @@ const Header = ({ opacity }) => {
   const location = useLocation()
   const collectionPath = location.pathname.replace(/[^/]*$/, '')
   const searchPath = location.pathname
+
+  // Convert hex to rgb to change background opacity
+  bgColor = hexToRgb(bgColor)
 
   const dropdownOpenHandler = () => {
     setIsDropdownOpen(!isDropdownOpen)
@@ -41,7 +46,7 @@ const Header = ({ opacity }) => {
   return (
     <header
       className={styles.header}
-      style={{ backgroundColor: `rgba(57, 54, 57,${opacity})` }}>
+      style={{ backgroundColor: `rgba(${bgColor.r}, ${bgColor.g}, ${bgColor.b},${opacity})` }}>
       <div className={styles.nav}>
         <PreviousBtn />
         <NextBtn />
