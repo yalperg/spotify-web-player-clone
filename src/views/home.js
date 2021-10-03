@@ -33,6 +33,8 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <Section title='Good Evening' items={DUMMY_DATA} />
+      <Section title='Good Evening' items={DUMMY_DATA} />
+      <Section title='Good Evening' items={DUMMY_DATA} />
     </div>
   )
 }
