@@ -1,5 +1,6 @@
 import styles from 'assets/styles/home.module.scss'
 import Section from 'components/section'
+import greetings from 'functions/greetings'
 
 const DUMMY_DATA = [
   {
@@ -49,11 +50,14 @@ const DUMMY_DATA = [
   }
 ]
 
-const Home = () => {
+const Home = () => {  
+  const greeting = greetings()
+
   return (
     <div className={styles.home}>
-      <Section title='Good Evening' items={DUMMY_DATA} size='small' />
+      <Section title={greeting} items={DUMMY_DATA} size='small' />
       <Section title='Your Playlists' items={DUMMY_DATA} size='medium' />
+      <Section title='Your Podcasts' items={DUMMY_DATA} size='medium' />
     </div>
   )
 }
