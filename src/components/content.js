@@ -29,12 +29,26 @@ const Content = () => {
     }
   }
 
+  const mouseEnterHandler = () => {
+    setBg({
+      ...bg,
+      home: '#32A89E'
+    })
+  }
+
+  const mouseLeaveHandler = () => {
+    setBg({
+      ...bg,
+      home: '#393639'
+    })
+  }
+
   return (
     <div ref={ref} style={background} className={styles.content} onScroll={scrollHandler}>
       <Header opacity={opacity} bgColor={bgColor} />
       <Switch>
         <Route exact path='/'>
-          <Home />
+          <Home mouseEnterHandler={mouseEnterHandler} mouseLeaveHandler={mouseLeaveHandler}  />
         </Route>
         <Route path='/search'>Search</Route>
         <Route path='/collection'>

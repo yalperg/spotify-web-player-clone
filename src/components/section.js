@@ -1,7 +1,7 @@
 import Card from 'components/card'
 import styles from 'assets/styles/section.module.scss'
 
-const Section = ({ title, items, size }) => {
+const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler }) => {
 
   return (
     <section className={styles.section}>
@@ -14,6 +14,8 @@ const Section = ({ title, items, size }) => {
               title={item.title}
               creator={item.creator}
               size={size}
+              mouseEnterHandler={mouseEnterHandler} 
+              mouseLeaveHandler={mouseLeaveHandler}
             />
           )
         })}

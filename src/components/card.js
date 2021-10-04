@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from 'assets/styles/card.module.scss'
 import { PauseIcon, PlayIcon } from 'assets/icons/icons'
 
-const Card = ({ image, title, creator, size = 'medium' }) => {
+const Card = ({ image, title, creator, size = 'medium', mouseEnterHandler, mouseLeaveHandler }) => {
   const [isPlaying, setIsPlaying] = useState(false)
 
   const playHandler = () => {
@@ -10,7 +10,7 @@ const Card = ({ image, title, creator, size = 'medium' }) => {
   }
 
   return (
-    <div className={styles[size]}>
+    <div className={styles[size]} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
       <a href='/'>
         <img src={image} alt={title} />
         <span>{title}</span>
