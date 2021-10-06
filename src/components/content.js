@@ -16,7 +16,7 @@ const Content = () => {
 
   const bgColor = location.pathname === '/' ? bg.home : bg.pages
   const background = {
-    background: `linear-gradient(to bottom, ${bgColor}, ${bg.default}, ${bg.default})`,
+    background: `linear-gradient(to bottom, ${bgColor}, ${bg.default}, ${bg.default}, ${bg.default})`,
   }
 
   const scrollHandler = () => {
