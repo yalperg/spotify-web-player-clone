@@ -2,62 +2,18 @@ import styles from 'assets/styles/home.module.scss'
 import Section from 'components/section'
 import greetings from 'functions/greetings'
 
-const DUMMY_DATA = [
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  },
-  {
-    image: 'https://i.scdn.co/image/ab67706c0000da84fff52ad2733848cd17182f37',
-    title: 'Random bullshit go ama türkçe',
-    creator: 'Yunus Alper Göl'
-  }
-]
+import { useSelector } from 'react-redux'
 
-const Home = ( {mouseEnterHandler, mouseLeaveHandler }) => {  
+const Home = ( {mouseEnterHandler, mouseLeaveHandler }) => { 
+  const { playlists } = useSelector(state => state.playlists)
+  
   const greeting = greetings()
 
   return (
     <div className={styles.home}>
-      <Section title={greeting} items={DUMMY_DATA} size='small' mouseEnterHandler={mouseEnterHandler} mouseLeaveHandler={mouseLeaveHandler}  />
-      <Section title='Your Playlists' items={DUMMY_DATA} size='medium' />
-      <Section title='Your Shows' items={DUMMY_DATA} size='medium' />
+      <Section title={greeting} items={playlists} size='small' mouseEnterHandler={mouseEnterHandler} mouseLeaveHandler={mouseLeaveHandler}  />
+      <Section title='playlists' items={playlists} size='medium' />
+      <Section title='Your Shows' items={playlists}  size='medium' />
     </div>
   )
 }
