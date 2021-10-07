@@ -2,7 +2,20 @@ import { Link } from 'react-router-dom'
 import styles from 'assets/styles/dropdown.module.scss'
 import { ExternalLinkIcon } from 'assets/icons/icons'
 
+import { useDispatch } from 'react-redux'
+import { authActions } from 'store/auth-slice'
+
 const Dropwdown = ({ dropdownRef }) => {
+  const dispatch = useDispatch()
+
+  const signOutHandler = () => {
+    localStorage.removeItem('access_token')
+    localStorage.removeItem('refresh_token')
+    localStorage.removeItem('expires_in')
+    dispatch(authActions.signOut())
+  }
+
+
   return ( 
     <div ref={dropdownRef} className={styles.dropdown}>
       <ul>
@@ -16,7 +29,7 @@ const Dropwdown = ({ dropdownRef }) => {
           <Link to='/'>Profile</Link>
         </li>
         <li>
-          <Link to='/'>Log Out</Link>
+          <Link to='/' onClick={signOutHandler}>Log Out</Link>
         </li>
       </ul>
     </div>

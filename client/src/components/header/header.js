@@ -14,7 +14,6 @@ const Header = ({ opacity, bgColor }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef()
   const btnRef = useRef()
-
   const location = useLocation()
   const collectionPath = location.pathname.replace(/[^/]*$/, '')
   const searchPath = location.pathname
