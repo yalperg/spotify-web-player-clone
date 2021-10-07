@@ -20,7 +20,6 @@ router.post('/', (req,res) => {
     res.json({
       accessToken: data.body.access_token,
       refreshToken: data.body.refresh_token,
-      expiresIn: data.body.expires_in
     })
   })
   .catch(err => {

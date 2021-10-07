@@ -20,7 +20,6 @@ router.get('/', (req, res) => {
     .then(data => {
       res.json({
         accessToken: data.body.access_token,
-        expiresIn: data.body.expires_in,
       })
     })
     .catch(err => {

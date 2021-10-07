@@ -27,7 +27,6 @@ const useAuth = authorizationCode => {
         .then(res => {
           localStorage.setItem('access_token', res.data.accessToken)
           localStorage.setItem('refresh_token', res.data.refreshToken)
-          localStorage.setItem('expires_in', res.data.expiresIn)
           localStorage.setItem('timestamp', Date.now())
 
           window.location = '/'
@@ -51,7 +50,6 @@ const useAuth = authorizationCode => {
         )
         .then(res => {
           localStorage.setItem('access_token', res.data.accessToken)
-          localStorage.setItem('expires_in', res.data.expiresIn)
           localStorage.setItem('timestamp', Date.now())
 
           window.location = '/'

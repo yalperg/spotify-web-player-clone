@@ -10,8 +10,11 @@ import SearchBar from 'components/header/search-bar'
 
 import hexToRgb from 'functions/hext-to-rgb'
 
+import { useSelector } from 'react-redux'
+
 const Header = ({ opacity, bgColor }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const { user } = useSelector(state => state.user)
   const dropdownRef = useRef()
   const btnRef = useRef()
   const location = useLocation()
@@ -59,7 +62,7 @@ const Header = ({ opacity, bgColor }) => {
         <div className={styles.user}>
           <UserIcon />
         </div>
-        <span>Yunus Alper Göl </span>
+        <span>{user.display_name}</span>
         {!isDropdownOpen ? <DownIcon /> : <UpIcon />}
       </button>
       {isDropdownOpen && <Dropwdown dropdownRef={dropdownRef} />}
