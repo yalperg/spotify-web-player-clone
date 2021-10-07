@@ -6,17 +6,14 @@ dotenv.config()
 
 const router = express.Router()
 
-
-const redirect_uri = 'http://localhost:3000'
-
 const spotiApi = new spotifyWepApi({
-  redirectUri: redirect_uri,
+  redirectUri: process.env.REDIRECT_URI,
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
 })
 
 router.post('/', (req,res) => {
-  const code = req.body.headers.Authorization
+  const code = req.body.Authorization
 
   spotiApi.authorizationCodeGrant(code)
   .then(data => {

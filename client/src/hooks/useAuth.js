@@ -1,28 +1,35 @@
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
+import dotenv from 'dotenv'
 
-
-const server_uri = 'http://localhost:5000'
+dotenv.config()
 
 const useAuth = authorizationCode => {
-  const {accessToken, refreshToken, expiresIn, istokenExpired} = useSelector(state => state.auth)
+  const { accessToken, refreshToken, istokenExpired } = useSelector(
+    state => state.auth
+  )
 
   useEffect(() => {
     if (!authorizationCode) return
 
     if (!accessToken) {
       axios
-        .post(`${server_uri}/login`, {
-          headers: {
-            'Authorization': authorizationCode,
-            'Content-Type': 'application/json',
+        .post(
+          `${process.env.REACT_APP_SERVER_URI}/login`,
+          { Authorization: authorizationCode },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
           }
-        })
+        )
         .then(res => {
           localStorage.setItem('access_token', res.data.accessToken)
           localStorage.setItem('refresh_token', res.data.refreshToken)
           localStorage.setItem('expires_in', res.data.expiresIn)
+          localStorage.setItem('timestamp', Date.now())
+
           window.location = '/'
         })
         .catch(err => {
@@ -32,11 +39,29 @@ const useAuth = authorizationCode => {
     }
 
     if (istokenExpired) {
-      /* Post request to server_url/refresh body-> refreshToken*/
-      /* set accessToken, expires in  */
-      /* catch error */
+      axios
+        .post(
+          `${process.env.REACT_APP_SERVER_URI}/refresh`,
+          { RefreshToken: refreshToken },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        )
+        .then(res => {
+          localStorage.setItem('access_token', res.data.accessToken)
+          localStorage.setItem('expires_in', res.data.expiresIn)
+          localStorage.setItem('timestamp', Date.now())
+
+          window.location = '/'
+        })
+        .catch(err => {
+          console.log(err)
+          window.location = '/'
+        })
     }
-  }, [authorizationCode, accessToken, istokenExpired])
+  }, [authorizationCode, accessToken, istokenExpired, refreshToken])
 
   return !!accessToken
 }

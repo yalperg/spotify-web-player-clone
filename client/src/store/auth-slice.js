@@ -6,7 +6,7 @@ const authSlice = createSlice({
     accessToken : localStorage.getItem('access_token'),
     refreshToken: localStorage.getItem('refresh_token'),
     expiresIn: localStorage.getItem('expires_in'),
-    isTokenExpired: false
+    isTokenExpired: (Date.now() - localStorage.getItem('timestamp')) >= 3600000
   },
   reducers: {
     signOut(state, action) {
