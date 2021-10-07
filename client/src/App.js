@@ -8,7 +8,7 @@ import Login from 'views/login'
 import useAuth from 'hooks/useAuth'
 
 import { useDispatch } from 'react-redux'
-import { getUser } from 'actions/user'
+import { getUser, getUsersPlaylists } from 'actions/user'
 
 import styles from 'assets/styles/app.module.scss'
 
@@ -21,7 +21,10 @@ function App() {
   const isAuth = useAuth(authorizationCode)
 
   useEffect(() => {
-    isAuth && dispatch(getUser())
+    if(isAuth) {
+      dispatch(getUser())
+      dispatch(getUsersPlaylists())
+    }
   }, [dispatch, isAuth])
 
   

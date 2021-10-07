@@ -11,3 +11,14 @@ export const getUser = () => async dispatch => {
     console.log(error.message)
   }
 }
+
+export const getUsersPlaylists = () => async dispatch => {
+  const accessToken = localStorage.getItem('access_token')
+
+  try {
+    const { data } = await api.fetchUsersPlaylists(accessToken) 
+    dispatch(userActions.replacePlaylists(data))
+  } catch (error) {
+    console.log(error)
+  }
+}

@@ -5,10 +5,9 @@ import greetings from 'functions/greetings'
 import { useSelector } from 'react-redux'
 
 const Home = ( {mouseEnterHandler, mouseLeaveHandler }) => { 
-  const { playlists } = useSelector(state => state.playlists)
+  const { playlists } = useSelector(state => state.user)
   
   const greeting = greetings()
-
   return (
     <div className={styles.home}>
       <Section title={greeting} items={playlists} size='small' mouseEnterHandler={mouseEnterHandler} mouseLeaveHandler={mouseLeaveHandler}  />

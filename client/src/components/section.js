@@ -11,9 +11,9 @@ const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler }) =
           return (
             <Card
               key={item.id}
-              image={item.image}
-              title={item.title}
-              creator={item.creator}
+              image={item.images[0].url}
+              title={item.name}
+              creator={item.owner.display_name}
               size={size}
               mouseEnterHandler={mouseEnterHandler} 
               mouseLeaveHandler={mouseLeaveHandler}

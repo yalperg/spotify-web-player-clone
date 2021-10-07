@@ -11,7 +11,7 @@ const Dropwdown = ({ dropdownRef }) => {
   const signOutHandler = () => {
     localStorage.removeItem('access_token')
     localStorage.removeItem('refresh_token')
-    localStorage.removeItem('expires_in')
+    localStorage.removeItem('timestamp')
     dispatch(authActions.signOut())
   }
 

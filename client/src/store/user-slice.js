@@ -3,12 +3,16 @@ import { createSlice } from '@reduxjs/toolkit'
 const userSlice = createSlice({
   name: 'user',
   initialState: {
-    user: {}
+    info: {},
+    playlists: []
   },
   reducers: {
     replaceUser(state, action) {
-      state.user = action.payload
+      state.info = action.payload
     },
+    replacePlaylists(state, action) {
+      state.playlists = action.payload.items
+    }
   },
 })
 
