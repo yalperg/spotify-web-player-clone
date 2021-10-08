@@ -28,7 +28,7 @@ export const getUsersTops = (type) => async dispatch => {
 
   try {
     const { data } = await api.fetchUsersTops(accessToken, type) 
-    dispatch(userActions.replaceTops(data))
+    dispatch(userActions.replaceTops({data, type: type}))
   } catch (error) {
     console.log(error)
   }

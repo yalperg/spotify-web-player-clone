@@ -18,7 +18,8 @@ const userSlice = createSlice({
       state.playlists = action.payload.items
     },
     replaceTops(state, action) {
-      state.tops.artists = action.payload.items
+      const type = action.payload.type
+      state.tops[type] = action.payload.data.items
     }
   },
 })

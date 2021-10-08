@@ -9,13 +9,7 @@ const CollectionNav = () => {
           <NavLink to='/collection/top-artists' activeClassName={styles.active}>Top Artists</NavLink>
         </li>
         <li>
-          <NavLink to='/collection/podcasts' activeClassName={styles.active}>Podcats</NavLink>
-        </li>
-        <li>
-          <NavLink to='/collection/artists' activeClassName={styles.active}>Artists</NavLink>
-        </li>
-        <li>
-          <NavLink to='/collection/albums' activeClassName={styles.active}>Albums</NavLink>
+          <NavLink to='/collection/top-tracks' activeClassName={styles.active}>Top Tracks</NavLink>
         </li>
       </ul>
     </nav>

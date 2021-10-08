@@ -4,6 +4,7 @@ import styles from 'assets/styles/content.module.scss'
 import Header from 'components/header/header'
 import Home from 'views/home'
 import Artists from 'views/top-artists'
+import Tracks from 'views/top-tracks'
 
 import { average } from 'color.js'
 
@@ -68,6 +69,9 @@ const Content = () => {
         </Route>
         <Route path='/collection/top-artists'>
           <Artists />
+        </Route>
+        <Route path='/collection/top-tracks'>
+          <Tracks />
         </Route>
         <Route path='/create'>Create</Route>
         <Route path='/collection/tracks'>Liked Songs</Route>
