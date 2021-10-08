@@ -4,7 +4,7 @@ import styles from 'assets/styles/playlists.module.scss'
 import { useSelector } from 'react-redux'
 
 const Playlists = () => {
-  const { playlists } = useSelector(state => state.playlists)
+  const { playlists } = useSelector(state => state.user)
 
   return (
     <nav className={styles.nav}>
@@ -13,7 +13,7 @@ const Playlists = () => {
           return (
             <li key={playlist.id}>
               <NavLink to={`/playlist/${playlist.id}`} activeClassName={styles.active}>
-                {playlist.title}
+                {playlist.name}
               </NavLink>
             </li>
           )
