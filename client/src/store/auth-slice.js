@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit"
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    accessToken : localStorage.getItem('access_token'),
-    refreshToken: localStorage.getItem('refresh_token'),
-    isTokenExpired: (Date.now() - localStorage.getItem('timestamp')) >= 3600000
+    accessToken : sessionStorage.getItem('access_token'),
+    refreshToken: sessionStorage.getItem('refresh_token'),
+    isTokenExpired: (Date.now() - sessionStorage.getItem('timestamp')) >= 3600000
   },
   reducers: {
     signOut(state, action) {

@@ -2,7 +2,7 @@ import * as api from 'api'
 import { userActions } from 'store/user-slice'
 
 export const getUser = () => async dispatch => {
-  const accessToken = localStorage.getItem('access_token')
+  const accessToken = sessionStorage.getItem('access_token')
 
   try {
     const { data } = await api.fecthUser(accessToken)
@@ -13,7 +13,7 @@ export const getUser = () => async dispatch => {
 }
 
 export const getUsersPlaylists = () => async dispatch => {
-  const accessToken = localStorage.getItem('access_token')
+  const accessToken = sessionStorage.getItem('access_token')
 
   try {
     const { data } = await api.fetchUsersPlaylists(accessToken) 
@@ -24,7 +24,7 @@ export const getUsersPlaylists = () => async dispatch => {
 }
 
 export const getUsersTops = (type) => async dispatch => {
-  const accessToken = localStorage.getItem('access_token')
+  const accessToken = sessionStorage.getItem('access_token')
 
   try {
     const { data } = await api.fetchUsersTops(accessToken, type) 

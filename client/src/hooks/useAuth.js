@@ -25,9 +25,9 @@ const useAuth = authorizationCode => {
           }
         )
         .then(res => {
-          localStorage.setItem('access_token', res.data.accessToken)
-          localStorage.setItem('refresh_token', res.data.refreshToken)
-          localStorage.setItem('timestamp', Date.now())
+          sessionStorage.setItem('access_token', res.data.accessToken)
+          sessionStorage.setItem('refresh_token', res.data.refreshToken)
+          sessionStorage.setItem('timestamp', Date.now())
 
           window.location = '/'
         })
@@ -49,8 +49,8 @@ const useAuth = authorizationCode => {
           }
         )
         .then(res => {
-          localStorage.setItem('access_token', res.data.accessToken)
-          localStorage.setItem('timestamp', Date.now())
+          sessionStorage.setItem('access_token', res.data.accessToken)
+          sessionStorage.setItem('timestamp', Date.now())
 
           window.location = '/'
         })
