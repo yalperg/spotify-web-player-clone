@@ -11,7 +11,7 @@ const Home = ( {mouseEnterHandler, mouseLeaveHandler }) => {
   return (
     <div className={styles.home}>
       <Section title={greeting} items={playlists} size='small' mouseEnterHandler={mouseEnterHandler} mouseLeaveHandler={mouseLeaveHandler}  />
-      <Section title='playlists' items={playlists} size='medium' />
+      <Section title='Your Playlists' items={playlists} size='medium' />
       <Section title='Your Shows' items={playlists}  size='medium' />
     </div>
   )
