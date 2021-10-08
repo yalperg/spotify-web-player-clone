@@ -10,7 +10,8 @@ const Card = ({ image, title, creator, size = 'medium', mouseEnterHandler, mouse
   }
 
   return (
-    <div className={styles[size]} onMouseEnter={size==='small' && (() => mouseEnterHandler(image))} onMouseLeave={mouseLeaveHandler}>
+    size === 'small' ? (
+    <div className={styles[size]} onMouseEnter={() => mouseEnterHandler(image)} onMouseLeave={mouseLeaveHandler}>
       <a href='/'>
         <img src={image} alt={title} />
         <span>{title}</span>
@@ -20,6 +21,18 @@ const Card = ({ image, title, creator, size = 'medium', mouseEnterHandler, mouse
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
     </div>
+    ) : (
+    <div className={styles[size]}>
+      <a href='/'>
+        <img src={image} alt={title} />
+        <span>{title}</span>
+        {size === 'medium' ? <p>-{creator}</p> : null}
+      </a>
+      <button className={styles.play} onClick={playHandler}>
+        {isPlaying ? <PauseIcon /> : <PlayIcon />}
+      </button>
+    </div>
+    )
   )
 }
 
