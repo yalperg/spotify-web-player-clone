@@ -6,7 +6,7 @@ const CollectionNav = () => {
     <nav>
       <ul className={styles.nav}>
         <li>
-          <NavLink to='/collection/playlists' activeClassName={styles.active}>Playlists</NavLink>
+          <NavLink to='/collection/top-artists' activeClassName={styles.active}>Top Artists</NavLink>
         </li>
         <li>
           <NavLink to='/collection/podcasts' activeClassName={styles.active}>Podcats</NavLink>

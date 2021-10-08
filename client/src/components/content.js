@@ -3,6 +3,7 @@ import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 import styles from 'assets/styles/content.module.scss'
 import Header from 'components/header/header'
 import Home from 'views/home'
+import Artists from 'views/top-artists'
 
 import { average } from 'color.js'
 
@@ -62,8 +63,11 @@ const Content = () => {
           />
         </Route>
         <Route path='/search'>Search</Route>
-        <Route path='/collection'>
-          <Redirect to='/collection/playlists' />
+        <Route exact path='/collection'>
+          <Redirect to='/collection/top-artists' />
+        </Route>
+        <Route path='/collection/top-artists'>
+          <Artists />
         </Route>
         <Route path='/create'>Create</Route>
         <Route path='/collection/tracks'>Liked Songs</Route>
