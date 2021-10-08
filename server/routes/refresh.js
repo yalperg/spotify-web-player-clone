@@ -26,3 +26,6 @@ router.get('/', (req, res) => {
       res.sendStatus(400).send(err)
     })
 })
+
+
+module.exports = router
