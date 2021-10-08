@@ -3,7 +3,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 
 const loginRoutes = require('./routes/login')
-/* const refreshRoutes = require('./routes/refresh') */
+const refreshRoutes = require('./routes/refresh')
 
 dotenv.config()
 
@@ -13,7 +13,7 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors())
 
 app.use('/login', loginRoutes)
-/* app.use('/refresh', refreshRoutes) */
+app.use('/refresh', refreshRoutes)
 
 const PORT = process.env.PORT || 5000
 
