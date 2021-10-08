@@ -10,7 +10,7 @@ const Card = ({ image, title, creator, size = 'medium', mouseEnterHandler, mouse
   }
 
   return (
-    <div className={styles[size]} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+    <div className={styles[size]} onMouseEnter={size==='small' && (() => mouseEnterHandler(image))} onMouseLeave={mouseLeaveHandler}>
       <a href='/'>
         <img src={image} alt={title} />
         <span>{title}</span>

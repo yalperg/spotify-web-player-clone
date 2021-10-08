@@ -4,6 +4,8 @@ import styles from 'assets/styles/content.module.scss'
 import Header from 'components/header/header'
 import Home from 'views/home'
 
+import { average } from 'color.js'
+
 const Content = () => {
   const [opacity, setOpacity] = useState()
   const [bg, setBg] = useState({
@@ -29,26 +31,35 @@ const Content = () => {
     }
   }
 
-  const mouseEnterHandler = () => {
-    setBg({
-      ...bg,
-      home: '#32A89E'
-    })
+  const mouseEnterHandler = url => {
+    average(url, { format: 'hex' }).then(color =>
+      setBg({
+        ...bg,
+        home: color,
+      })
+    )
   }
 
   const mouseLeaveHandler = () => {
     setBg({
       ...bg,
-      home: '#393639'
+      home: '#393639',
     })
   }
 
   return (
-    <div ref={ref} style={background} className={styles.content} onScroll={scrollHandler}>
+    <div
+      ref={ref}
+      style={background}
+      className={styles.content}
+      onScroll={scrollHandler}>
       <Header opacity={opacity} bgColor={bgColor} />
       <Switch>
         <Route exact path='/'>
-          <Home mouseEnterHandler={mouseEnterHandler} mouseLeaveHandler={mouseLeaveHandler}  />
+          <Home
+            mouseEnterHandler={mouseEnterHandler}
+            mouseLeaveHandler={mouseLeaveHandler}
+          />
         </Route>
         <Route path='/search'>Search</Route>
         <Route path='/collection'>
