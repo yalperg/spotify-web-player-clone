@@ -8,7 +8,7 @@ import Login from 'views/login'
 import useAuth from 'hooks/useAuth'
 
 import { useDispatch } from 'react-redux'
-import { getUser, getUsersPlaylists } from 'actions/user'
+import { getFeatured, getUser, getUsersPlaylists } from 'actions/user'
 
 import styles from 'assets/styles/app.module.scss'
 
@@ -24,6 +24,7 @@ function App() {
     if(isAuth) {
       dispatch(getUser())
       dispatch(getUsersPlaylists())
+      dispatch(getFeatured())
     }
   }, [dispatch, isAuth])
 

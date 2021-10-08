@@ -7,8 +7,9 @@ const userSlice = createSlice({
     playlists: [],
     tops: {
       artists: [],
-      tracks: []
-    }
+      tracks: [],
+    },
+    featured: [],
   },
   reducers: {
     replaceUser(state, action) {
@@ -20,7 +21,10 @@ const userSlice = createSlice({
     replaceTops(state, action) {
       const type = action.payload.type
       state.tops[type] = action.payload.data.items
-    }
+    },
+    replaceFeatured(state, action) {
+      state.featured = action.payload.playlists.items
+    },
   },
 })
 

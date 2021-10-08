@@ -33,3 +33,15 @@ export const getUsersTops = (type) => async dispatch => {
     console.log(error)
   }
 }
+
+export const getFeatured = () => async dispatch => {
+  const accessToken = sessionStorage.getItem('access_token')
+
+  try {
+    const { data } = await api.fetchFeatured(accessToken) 
+    dispatch(userActions.replaceFeatured(data))
+  } catch (error) {
+    console.log(error)
+  }
+}
+
