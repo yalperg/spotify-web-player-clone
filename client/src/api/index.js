@@ -26,7 +26,7 @@ export const fetchUsersTops = async (accessToken, type) => {
     'Content-Type': 'application/json',
   }
 
-  const response = await axios.get(`https://api.spotify.com/v1/me/top/${type}`, { headers })
+  const response = await axios.get(`https://api.spotify.com/v1/me/top/${type}?limit=50&time_range=long_term`, { headers })
   return response
 }
 
