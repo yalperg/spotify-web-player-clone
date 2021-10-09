@@ -2,7 +2,6 @@ import Card from 'components/card'
 import styles from 'assets/styles/section.module.scss'
 
 const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler }) => {
-  console.log(items)
   return (
     <section className={styles.section}>
       <h1>{title}</h1>

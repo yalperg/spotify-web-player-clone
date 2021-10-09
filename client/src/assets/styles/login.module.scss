@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #699ae9, #a17cf6, #d99bdb);
+
+  a {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
+}
