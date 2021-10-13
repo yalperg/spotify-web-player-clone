@@ -40,3 +40,22 @@ export const fetchFeatured = async accessToken => {
   return response
 }
 
+export const fetchProfile = async (accessToken, id) => {
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    'Content-Type': 'application/json',
+  }
+
+  const response = await axios.get(`https://api.spotify.com/v1/users/${id}`, { headers })
+  return response
+}
+
+export const fetchProfilePlaylists = async (accessToken, id) => {
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    'Content-Type': 'application/json',
+  }
+
+  const response = await axios.get(`https://api.spotify.com/v1/users/${id}/playlists`, { headers })
+  return response
+}

@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import styles from 'assets/styles/dropdown.module.scss'
 import { ExternalLinkIcon } from 'assets/icons/icons'
 
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { authActions } from 'store/auth-slice'
 
 const Dropwdown = ({ dropdownRef }) => {
+  const { id } = useSelector(state => state.user.info)
   const dispatch = useDispatch()
 
   const signOutHandler = () => {
@@ -26,7 +27,7 @@ const Dropwdown = ({ dropdownRef }) => {
             </a>
         </li>
         <li>
-          <Link to='/'>Profile</Link>
+          <Link to={`/user/${id}`}>Profile</Link>
         </li>
         <li>
           <Link to='/' onClick={signOutHandler}>Log Out</Link>

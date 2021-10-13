@@ -7,6 +7,7 @@ import Artists from 'views/top-artists'
 import Tracks from 'views/top-tracks'
 
 import { average } from 'color.js'
+import Profile from 'views/profile'
 
 const Content = () => {
   const [opacity, setOpacity] = useState()
@@ -72,6 +73,9 @@ const Content = () => {
         </Route>
         <Route path='/collection/top-tracks'>
           <Tracks />
+        </Route>
+        <Route path='/user/:id'>
+          <Profile />
         </Route>
         <Route path='/create'>Create</Route>
         <Route path='/collection/tracks'>Liked Songs</Route>
