@@ -1,0 +1,21 @@
+@import 'variables.scss';
+
+.container {
+  height: 18.1rem;
+  border-bottom: 1px solid $third-color;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  color: #7f7f7f;
+}
+
+.image {
+  width: 14.5rem;
+  height: 14.5rem;
+  background-color: $third-color;
+  border-radius: 50%;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3), 0 6px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
