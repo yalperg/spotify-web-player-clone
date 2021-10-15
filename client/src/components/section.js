@@ -6,7 +6,7 @@ const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler }) =
     <section className={styles.section}>
       <h1>{title}</h1>
       <div className={`${styles.cards} ${size === 'small' ? styles.small : styles.medium}`}>
-        {items.map((item) => {
+        {items.length ? items.map((item) => {
           return (
             <Card
               key={item.id}
@@ -19,7 +19,7 @@ const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler }) =
               mouseLeaveHandler={mouseLeaveHandler}
             />
           )
-        })}
+        }) : <h1>Loading...</h1>}
       </div>
     </section>
   )

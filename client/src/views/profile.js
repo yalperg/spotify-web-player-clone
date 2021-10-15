@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getProfile, getProfilePlaylists } from 'actions/profile'
 import { profileActions } from 'store/profile-slice'
 import PorfileTop from 'components/profile-top'
+import Section from 'components/section'
+import styles from 'assets/styles/container.module.scss'
 
 const Profile = () => {
   const userData = useSelector(state => state.user)
@@ -25,6 +27,9 @@ const Profile = () => {
   return (
     <>
       <PorfileTop info={userData.info.id !== id ? profileData.info : userData.info } />
+      <div className={styles.container}>
+        <Section title='Public Playlists' items={userData.info.id !== id ? profileData.playlists : userData.playlists } />
+      </div>
     </>
   )
 }

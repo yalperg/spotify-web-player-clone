@@ -2,7 +2,6 @@ import styles from 'assets/styles/profile-top.module.scss'
 import { ProfileIcon } from 'assets/icons/icons'
 
 const PorfileTop = ({ info }) => {
-  console.log(info)
   return (
     <div className={styles.container}>
       <div className={styles.image}>
