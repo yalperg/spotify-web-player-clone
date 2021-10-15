@@ -3,11 +3,11 @@ import { useParams } from 'react-router'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProfile, getProfilePlaylists } from 'actions/profile'
 import { profileActions } from 'store/profile-slice'
-/* import styles from 'assets/styles/container.module.scss' */
 import PorfileTop from 'components/profile-top'
 
 const Profile = () => {
   const userData = useSelector(state => state.user)
+  const profileData = useSelector(state => state.profile)
   const { id } = useParams()
   const dispatch = useDispatch()
 
@@ -23,9 +23,9 @@ const Profile = () => {
   }, [dispatch, userData, id])
 
   return (
-    <div>
-      <PorfileTop />
-    </div>
+    <>
+      <PorfileTop info={userData.info.id !== id ? profileData.info : userData.info } />
+    </>
   )
 }
 
