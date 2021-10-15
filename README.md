@@ -59,5 +59,5 @@
 * Spotify Api
 
 ## Packages
-* [colors.js](https://www.npmjs.com/package/color.js) to get average color from image
-* [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) to get access and refresh tokens
+* [colors.js](https://www.npmjs.com/package/color.js) to get average color from image.
+* [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) to get access and refresh tokens.

@@ -59,3 +59,13 @@ export const fetchProfilePlaylists = async (accessToken, id) => {
   const response = await axios.get(`https://api.spotify.com/v1/users/${id}/playlists`, { headers })
   return response
 }
+
+export const search = async (accessToken, query) => {
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    'Content-Type': 'application/json',
+  }
+
+  const response = await axios.get(`https://api.spotify.com/v1/search?q=${query}&type=artist,album,track`, { headers })
+  return response
+}
