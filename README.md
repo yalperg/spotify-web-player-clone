@@ -28,7 +28,7 @@
         - [X] Profile Reducer
         - [X] Profile Actions
         - [X] User Actions
-        ---
+    ---
     - [X] Sidabar Routing    
     - [X] Make Sidebar resizeable
     - [X] Close Dropdown menu when user click outside
@@ -50,7 +50,7 @@
   - [X] Refresh Router
 
 
-## Tech I used in this project
+## Techs I used in this project
 
 * Reaact.js
 * SCSS
