@@ -8,7 +8,7 @@ const Menu = () => {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <NavLink to='/create' activeClassName={styles.active}>
+          <NavLink to='/'>
             <span className={styles.plus}>
               <PlusIcon />
             </span>
@@ -16,7 +16,7 @@ const Menu = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/tracks' activeClassName={styles.active}>
+          <NavLink to='/'>
             <span className={styles.heart}>
               <HeartIcon />
             </span>

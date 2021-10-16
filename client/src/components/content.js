@@ -80,8 +80,6 @@ const Content = () => {
         <Route path='/user/:id'>
           <Profile />
         </Route>
-        <Route path='/create'>Create</Route>
-        <Route path='/collection/tracks'>Liked Songs</Route>
       </Switch>
     </div>
   )
