@@ -21,7 +21,7 @@
         - [X] Top Artists
         - [X] Top Tracks
         - [ ] Playlist
-        - [ ] Search
+        - [X] Search
     - [X] Redux Store
         - [X] Auth Reducer
         - [X] User Reducer
@@ -42,7 +42,7 @@
     - [X] Get playlists from Spotify Api
     - [X] Get top-tracks and top-artists from Spotify Api
     - [X] Get Editor's Picks from Spotify Api
-    - [ ] Search users, artists, songs or podcasts
+    - [X] Search users, artists or songs
     - [ ] Responsive
    
 - [X] Backend
