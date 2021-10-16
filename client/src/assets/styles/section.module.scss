@@ -15,3 +15,19 @@
     grid-template-columns: repeat(auto-fill,minmax(12.5rem,1fr));
   }
 }
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    color: #7f7f7f;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
