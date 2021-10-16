@@ -28,7 +28,7 @@ const Profile = () => {
     <>
       <PorfileTop info={userData.info.id !== id ? profileData.info : userData.info } />
       <div className={styles.container}>
-        <Section title='Public Playlists' items={userData.info.id !== id ? profileData.playlists : userData.playlists } />
+        <Section title='Public Playlists' items={userData.info.id !== id ? profileData.playlists  : userData.playlists.filter(playlist => playlist.public) } />
       </div>
     </>
   )

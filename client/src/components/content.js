@@ -8,6 +8,7 @@ import Tracks from 'views/top-tracks'
 
 import { average } from 'color.js'
 import Profile from 'views/profile'
+import Search from 'views/search'
 
 const Content = () => {
   const [opacity, setOpacity] = useState()
@@ -64,7 +65,9 @@ const Content = () => {
             mouseLeaveHandler={mouseLeaveHandler}
           />
         </Route>
-        <Route path='/search'>Search</Route>
+        <Route path='/search'>
+          <Search />
+        </Route>
         <Route exact path='/collection'>
           <Redirect to='/collection/top-artists' />
         </Route>

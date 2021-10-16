@@ -13,6 +13,11 @@ const searchSlice = createSlice({
       state.artists = action.payload.artists.items
       state.tracks = action.payload.tracks.items
     },
+    removeSearch(state, action) {
+      state.albums = []
+      state.artists = []
+      state.tracks = []
+    }
   },
 })
 
