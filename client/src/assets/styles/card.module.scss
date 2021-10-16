@@ -17,11 +17,21 @@
     border-radius: 5px;
     font-weight: 600;
 
-    img {
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100%;
       width: 5rem;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
+
+      img {
+        height: 100%;
+        width: 5rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
     }
 
     span {
@@ -85,11 +95,21 @@
     color: #fff;
     font-weight: 600;
 
-    img {
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 11rem;
       border-radius: 3px;
       margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: 11rem;
+        border-radius: 3px;
+        margin-bottom: 1rem;
+      }
     }
 
     span {
@@ -106,7 +126,7 @@
       font-size: 14px;
       font-weight: 400;
       color: #b3b3b3;
-      margin-top: .3rem;
+      margin-top: 0.3rem;
     }
   }
 

@@ -17,7 +17,7 @@ const AlbumsSection = ({ title, items }) => {
     <section className={styles.section}>
       <div className={styles.title}>
         <h1>{title}</h1>
-        <span onClick={onClickHandler}>{limit === 7 ? 'See More' : 'See Less'}</span>
+        {items.length > 7 ? <span onClick={onClickHandler}>{limit === 7 ? 'See More' : 'See Less'}</span> : null}
       </div>
       <div className={`${styles.cards} ${styles.medium}`}>
         {items

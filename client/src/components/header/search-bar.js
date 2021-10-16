@@ -36,7 +36,6 @@ const SearchBar = () => {
       </span>
       <input
         type='search'
-        value={query}
         onChange={onInputChangeHandler}
         placeholder='Artists, songs, or podcasts'
       />
