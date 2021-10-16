@@ -1,8 +1,8 @@
 import styles from 'assets/styles/track.module.scss'
 
-const Track = ({ track, index }) => {
+const Track = ({ track, index, type }) => {
   return (
-    <div className={styles.track}>
+    <div className={`${styles.track} ${type === 'Search' ? styles.search : ''}`}>
       <span className={styles.order}>{index+1}</span>
       <img src={track.album.images[1].url} alt='' />
       <div className={styles.text}>
