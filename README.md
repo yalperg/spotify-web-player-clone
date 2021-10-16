@@ -26,8 +26,10 @@
         - [X] Auth Reducer
         - [X] User Reducer
         - [X] Profile Reducer
+        - [X] Search Reducer
         - [X] Profile Actions
         - [X] User Actions
+        - [X] Search Actions
     ---
     - [X] Sidabar Routing    
     - [X] Make Sidebar resizeable

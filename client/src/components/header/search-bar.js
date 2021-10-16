@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react' 
 import styles from 'assets/styles/search-bar.module.scss'
 import { SearchIcon } from 'assets/icons/icons'
-import { search } from 'api/index'
+import { useDispatch } from 'react-redux'
+import { searchData } from 'actions/search'
 
 const SearchBar = () => {
+  const dispatch = useDispatch()
   const [query, setQuery] = useState()
-  const [searchData, setSearchData] = useState()
-  const accessToken = sessionStorage.getItem('access_token')
   
   const onInputChange = (e) => {
     setQuery(e.target.value)
@@ -14,9 +14,9 @@ const SearchBar = () => {
 
   useEffect(() => {
     if(query){
-      search(accessToken, query).then(res => console.log(res.data))
+      dispatch(searchData(query))
     }
-  }, [query, accessToken])
+  }, [query, dispatch])
 
   return (
     <form className={styles.search}>

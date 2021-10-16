@@ -14,7 +14,6 @@ const Tracks = () => {
     dispatch(getUsersTops('tracks'))
   }, [dispatch])
 
-  console.log(tops.tracks)
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Your most listened tracks</h1>
