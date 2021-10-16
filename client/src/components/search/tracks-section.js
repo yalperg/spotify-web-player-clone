@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Track from 'components/track'
-import styles from 'assets/styles/section.module.scss'
+import styles from 'assets/styles/layout/section.module.scss'
 
 const TracksSection = ({ title, items }) => {
   const [limit, setLimit] = useState(7)

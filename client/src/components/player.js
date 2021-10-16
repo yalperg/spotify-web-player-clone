@@ -1,4 +1,4 @@
-import styles from 'assets/styles/player.module.scss'
+import styles from 'assets/styles/components/player.module.scss'
 
 const Player = () => {
   return ( 

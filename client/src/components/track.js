@@ -1,4 +1,4 @@
-import styles from 'assets/styles/track.module.scss'
+import styles from 'assets/styles/components/track.module.scss'
 
 const Track = ({ track, index, type }) => {
   return (

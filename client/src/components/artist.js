@@ -1,4 +1,4 @@
-import styles from 'assets/styles/artist.module.scss'
+import styles from 'assets/styles/components/artist.module.scss'
 
 const Artist = ({ artist, index }) => {
   return (

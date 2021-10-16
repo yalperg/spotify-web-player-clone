@@ -1,4 +1,4 @@
-import styles from 'assets/styles/container.module.scss'
+import styles from 'assets/styles/layout/container.module.scss'
 import Section from 'components/section'
 import greetings from 'functions/greetings'
 

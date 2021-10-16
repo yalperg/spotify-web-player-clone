@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import styles from 'assets/styles/download.module.scss'
+import styles from 'assets/styles/components/download.module.scss'
 import {
   DownloadIcon
 } from 'assets/icons/icons'

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styles from 'assets/styles/dropdown.module.scss'
+import styles from 'assets/styles/components/dropdown.module.scss'
 import { ExternalLinkIcon } from 'assets/icons/icons'
 
 import { useDispatch, useSelector } from 'react-redux'

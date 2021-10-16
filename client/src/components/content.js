@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
-import styles from 'assets/styles/content.module.scss'
+import styles from 'assets/styles/layout/content.module.scss'
 import Header from 'components/header/header'
 import Home from 'views/home'
 import Artists from 'views/top-artists'

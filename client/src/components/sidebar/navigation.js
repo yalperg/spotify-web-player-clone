@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import styles from 'assets/styles/navigation.module.scss'
+import styles from 'assets/styles/components/navigation.module.scss'
 import {
   HomeIcon,
   HomeIconActive,

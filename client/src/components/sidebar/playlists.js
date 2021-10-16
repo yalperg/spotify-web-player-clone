@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import styles from 'assets/styles/playlists.module.scss'
+import styles from 'assets/styles/components/playlists.module.scss'
 
 import { useSelector } from 'react-redux'
 

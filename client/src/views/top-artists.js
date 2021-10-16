@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getUsersTops } from 'actions/user'
 import Artist from 'components/artist'
 
-import styles from 'assets/styles/container.module.scss'
+import styles from 'assets/styles/layout/container.module.scss'
 
 const Artists = () => {
   const { tops } = useSelector(state => state.user)

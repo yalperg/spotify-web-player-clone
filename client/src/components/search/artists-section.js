@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Card from 'components/card'
-import styles from 'assets/styles/section.module.scss'
+import styles from 'assets/styles/layout/section.module.scss'
 
 const ArtistsSection = ({ title, items }) => {
   const [limit, setLimit] = useState(7)

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import styles from 'assets/styles/collection-nav.module.scss'
+import styles from 'assets/styles/components/collection-nav.module.scss'
 
 const CollectionNav = () => {
   return (

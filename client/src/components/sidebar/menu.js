@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { HeartIcon, PlusIcon } from 'assets/icons/icons'
-import styles from 'assets/styles/menu.module.scss'
+import styles from 'assets/styles/components/menu.module.scss'
 
 const Menu = () => {
   return (

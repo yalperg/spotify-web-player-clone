@@ -1,4 +1,4 @@
-import styles from 'assets/styles/login.module.scss'
+import styles from 'assets/styles/pages/login.module.scss'
 import dotenv from 'dotenv'
 
 dotenv.config()

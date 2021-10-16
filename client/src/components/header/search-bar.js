@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import styles from 'assets/styles/search-bar.module.scss'
+import styles from 'assets/styles/components/search-bar.module.scss'
 import { SearchIcon } from 'assets/icons/icons'
 import { useDispatch } from 'react-redux'
 import { searchData } from 'actions/search'

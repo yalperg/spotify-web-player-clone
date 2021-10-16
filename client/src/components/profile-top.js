@@ -1,4 +1,4 @@
-import styles from 'assets/styles/profile-top.module.scss'
+import styles from 'assets/styles/components/profile-top.module.scss'
 import { ProfileIcon } from 'assets/icons/icons'
 
 const PorfileTop = ({ info }) => {

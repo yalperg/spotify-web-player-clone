@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { Link } from 'react-router-dom'
 import logo from 'assets/images/logo.svg'
-import styles from 'assets/styles/sidebar.module.scss'
+import styles from 'assets/styles/layout/sidebar.module.scss'
 
 import Navigation from 'components/sidebar/navigation'
 import Menu from 'components/sidebar/menu'
