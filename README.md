@@ -43,7 +43,7 @@
     - [X] Get top-tracks and top-artists from Spotify Api
     - [X] Get Editor's Picks from Spotify Api
     - [X] Search users, artists or songs
-    - [ ] Responsive
+    - [X] Responsive
    
 - [X] Backend
   - [X] Express Configurations
