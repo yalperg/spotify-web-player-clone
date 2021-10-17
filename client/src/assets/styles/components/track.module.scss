@@ -1,39 +1,7 @@
-@import '../abstracts/variables';
+@import '../abstracts//mixins';
 
 .track {
-  height: 5rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  color: $secondary-color;
-  font-size: 1.2rem;
-  border-radius: 3px;
-
-  img {
-    height: 100%;
-    width: 5rem;
-    margin-right: 1.2rem;
-    border-radius: 3px;
-  }
-
-  .order {
-    margin-right: 1.5rem;
-  }
-  
-  .text {
-    display: flex;
-    flex-direction: column;
-
-    .name {
-      color: $primary-color;
-      margin-bottom: .5rem;
-    }
-  }
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
+  @include tops-item;
 }
 
 .search {
