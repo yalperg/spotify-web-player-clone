@@ -75,6 +75,15 @@
       opacity: 1;
     }
   }
+
+
+  @media screen and (max-width: 944px) {
+    a {
+      span {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .medium {
@@ -159,5 +168,13 @@
     .play {
       opacity: 1;
     }
+  }
+
+  @media screen and (max-width: 969px) {
+    width: 12rem;
+  }
+
+  @media screen and (max-width: 770px) {
+    width: 11rem;
   }
 }

@@ -26,4 +26,12 @@
       background-size: 10px 10px;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    width: 10rem;
+  }
+
+  @media screen and (max-width: 656px) {
+    width: 7rem;
+  }
 }

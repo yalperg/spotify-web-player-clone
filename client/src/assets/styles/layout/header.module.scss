@@ -60,4 +60,24 @@
     align-items: center;
     background-color: $third-color;
   }
+
+  @media screen and (max-width: 1000px) {
+    .dropdown {
+      padding-right: .2rem;
+
+      span {
+        display: none;
+      }
+
+      svg {
+        display: none;
+      }
+
+      .user {
+        svg {
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
