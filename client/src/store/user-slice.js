@@ -10,7 +10,7 @@ const userSlice = createSlice({
       tracks: [],
     },
     featured: [],
-    recentTrack: []
+    recentTrack: {}
   },
   reducers: {
     replaceUser(state, action) {
@@ -27,7 +27,7 @@ const userSlice = createSlice({
       state.featured = action.payload.playlists.items
     },
     replaceRecentTrack(state, action){
-      state.recentTrack = action.payload.items[0]
+      state.recentTrack = action.payload.items[0].track
     }
   },
 })

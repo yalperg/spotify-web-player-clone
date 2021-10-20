@@ -1,0 +1,30 @@
+.song {
+  width: 30%;
+  min-width: 11.25rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 100%;
+    margin-right: 1rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+
+    span:first-child {
+      color: #fff;
+    }
+
+    span:nth-child(2) {
+      font-size: 0.8rem;
+    }
+  }
+
+  svg:last-child {
+    margin-left: .7rem;
+  }
+}

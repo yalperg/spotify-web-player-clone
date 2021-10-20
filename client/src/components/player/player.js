@@ -1,9 +1,12 @@
 import styles from 'assets/styles/components/player.module.scss'
+import Song from 'components/player/song'
 
 const Player = () => {
   return ( 
     <div className={styles.player}>
-      Player
+      <Song />
+      <div className={styles.song}>Player</div>
+      <div className={styles.song}>Settings</div>
     </div>
    )
 }
