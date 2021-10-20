@@ -44,6 +44,7 @@
     - [X] Get Editor's Picks from Spotify Api
     - [X] Search users, artists or songs
     - [X] Responsive
+    - [X] Get User's Recently Played Track
    
 - [X] Backend
   - [X] Express Configurations

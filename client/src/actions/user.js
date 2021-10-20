@@ -45,3 +45,14 @@ export const getFeatured = () => async dispatch => {
   }
 }
 
+export const getRecentTrack = () => async dispatch => {
+  const accessToken = sessionStorage.getItem('access_token')
+
+  try {
+    const { data } = await api.fetchRecentTrack(accessToken)
+    dispatch(userActions.replaceRecentTrack(data))
+  } catch (error) {
+    console.log(error)
+  }
+}
+

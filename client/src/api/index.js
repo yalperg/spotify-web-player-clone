@@ -69,3 +69,13 @@ export const search = async (accessToken, query) => {
   const response = await axios.get(`https://api.spotify.com/v1/search?q=${query}&type=artist,album,track`, { headers })
   return response
 }
+
+export const fetchRecentTrack = async(accessToken) => {
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    'Content-Type': 'application/json',
+  }
+
+  const response = await axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=1`, { headers })
+  return response
+}
