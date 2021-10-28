@@ -1,4 +1,4 @@
-import styles from 'assets/styles/components/footer.module.scss'
+import styles from 'assets/styles/layout/footer.module.scss'
 import Song from 'components/footer/song'
 import Player from 'components/footer/player'
 import Options from 'components/footer/options'

@@ -7,7 +7,6 @@ export const getPlaylist = (id) => async dispatch => {
   try {
     const { data } = await api.fetchPlaylist(accessToken, id)
     dispatch(playlistActions.replacePlaylist(data))
-    console.log(data)
   } catch (error) {
     console.log(error)
   }
