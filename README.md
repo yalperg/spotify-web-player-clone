@@ -33,13 +33,13 @@
         - [ ] Playlist
         - [X] Search
     - [X] Redux Store
-        -[X] Reducers
+        - [X] Reducers
             - [X] Auth
             - [X] User 
             - [X] Profile 
             - [X] Search 
             - [X] Playlist 
-        -[X] Actions
+        - [X] Actions
             - [X] Profile 
             - [X] User 
             - [X] Search 
