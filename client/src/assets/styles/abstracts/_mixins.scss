@@ -40,3 +40,9 @@
   }
 }
 
+@mixin player-item {
+  width: 30%;
+  min-width: 11.25rem;
+  height: 3.5rem;
+}
+

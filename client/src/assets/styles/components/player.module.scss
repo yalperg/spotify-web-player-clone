@@ -1,15 +1,106 @@
-@import '../abstracts/variables';
-
+@import '../abstracts/mixins';
+@import '../abstracts//variables';
 
 .player {
-  width: 100%;
-  height: 5.7rem;
-  box-sizing: border-box;
-  background: $secondary-bg;
-  color: $secondary-color;
-  border-top: 1px solid $third-color;
+  @include player-item;
   display: flex;
+  flex-direction: column;
+  justify-items: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  gap: .5rem;
+
+  svg:hover {
+    color: #fff;
+  }
 }
+
+
+.sliderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  width: 100%;
+
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: .24rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #535353;
+    
+
+    /* Chrome */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: .7rem;
+      height: .7rem;
+      z-index: 5;
+      position: relative;
+      border-radius: 50%;
+      
+    }
+
+    /* Moz */
+    &::-moz-range-thumb {
+      width: .7rem;
+      height: .7rem;
+      z-index: 5;
+      position: relative;
+      border-radius: 50%;
+      border: none;
+      outline: none; 
+      background-color: transparent;   
+    }
+
+    &::-moz-range-progress {
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      background-color: $green-color;
+      border-radius: 5px;
+    }
+  
+    &:hover {
+      &::-webkit-slider-thumb {
+        background-color: #fff;
+      }
+
+      &::-moz-range-thumb {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  .playBtn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    svg:hover {
+      color: #000;
+    }
+  }
+}
+

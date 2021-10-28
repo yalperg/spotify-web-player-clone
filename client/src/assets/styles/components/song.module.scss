@@ -1,7 +1,7 @@
+@import '../abstracts/mixins';
+
 .song {
-  width: 30%;
-  min-width: 11.25rem;
-  height: 3.5rem;
+  @include player-item;
   display: flex;
   align-items: center;
 
@@ -24,7 +24,14 @@
     }
   }
 
-  svg:last-child {
-    margin-left: .7rem;
+  svg {
+    &:last-child {
+      margin-left: .7rem;
+    }
+
+    &:hover {
+      color: #fff;
+    }
   }
+
 }

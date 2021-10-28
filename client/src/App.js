@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import Sidebar from 'components/sidebar/sidebar'
 import Content from 'components/content'
-import Player from 'components/player/player'
+import Footer from 'components/footer/footer'
 import Login from 'views/login'
 import useAuth from 'hooks/useAuth'
 
@@ -40,7 +40,7 @@ function App() {
             <Sidebar />
             <Content />
           </div>
-          <Player />
+          <Footer />
         </Router>
       )}
     </div>
