@@ -5,7 +5,13 @@
 - [ ] Frontend
     - [ ] Components
         - [X] Header
+            - [X] Navigation
+            - [X] Searchbar
         - [X] Sidebar
+            - [X] Download
+            - [X] Menu
+            - [X] Navigation
+            - [X] Playlists
         - [X] Card
         - [X] Content
         - [X] Dropdown
@@ -14,6 +20,10 @@
         - [X] Artist
         - [X] Profile Top
         - [X] Footer
+            - [X] Player
+            - [X] Slider
+            - [X] Options
+            - [X] Song
     - [ ] Pages
         - [X] Home
         - [X] Login
