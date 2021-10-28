@@ -52,17 +52,17 @@
     - [X] Greeting Function
     - [X] Get Average color from playlist cover image
     - [X] Change home page background-color on playlist hover
-    - [X] Get user data from Spotify Api
-    - [X] Get playlists from Spotify Api
-    - [X] Get top-tracks and top-artists from Spotify Api
-    - [X] Get Editor's Picks from Spotify Api
+    - [X] Get user data from Spotify API
+    - [X] Get playlists from Spotify API
+    - [X] Get top-tracks and top-artists from Spotify API
+    - [X] Get Editor's Picks from Spotify API
     - [X] Search users, artists or songs
     - [X] Responsive
     - [X] Get User's Recently Played Track
    
 - [X] Backend
   - [X] Express Configurations
-  - [X] Connect Spotify Api
+  - [X] Connect Spotify API
   - [X] Login Router
   - [X] Refresh Router
 
@@ -73,7 +73,7 @@
 * SASS/SCSS
 * Node.js
 * Express.js
-* Spotify Api
+* Spotify API
 
 ## Packages
 * [colors.js](https://www.npmjs.com/package/color.js) to get average color from image.

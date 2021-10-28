@@ -60,7 +60,7 @@ const Header = ({ opacity, bgColor }) => {
         className={styles.dropdown}
         onClick={dropdownOpenHandler}>
         <div className={styles.user}>
-          <UserIcon />
+          {info.images?.length ? <img src={info.images[0]?.url} alt="user" /> :  <UserIcon />}
         </div>
         <span>{info.display_name}</span>
         {!isDropdownOpen ? <DownIcon /> : <UpIcon />}
