@@ -1,14 +1,18 @@
 import { useState, useRef } from 'react'
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
-import styles from 'assets/styles/layout/content.module.scss'
-import Header from 'components/header/header'
+
+import { average } from 'color.js'
+
+import Profile from 'views/profile'
+import Search from 'views/search'
+import Playlist from 'views/playlist'
 import Home from 'views/home'
 import Artists from 'views/top-artists'
 import Tracks from 'views/top-tracks'
 
-import { average } from 'color.js'
-import Profile from 'views/profile'
-import Search from 'views/search'
+import Header from 'components/header/header'
+
+import styles from 'assets/styles/layout/content.module.scss'
 
 const Content = () => {
   const [opacity, setOpacity] = useState()
@@ -79,6 +83,9 @@ const Content = () => {
         </Route>
         <Route path='/user/:id'>
           <Profile />
+        </Route>
+        <Route path='/playlist/:id'>
+          <Playlist />
         </Route>
       </Switch>
     </div>

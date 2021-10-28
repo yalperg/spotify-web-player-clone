@@ -79,3 +79,13 @@ export const fetchRecentTrack = async(accessToken) => {
   const response = await axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=1`, { headers })
   return response
 }
+
+export const fetchPlaylist = async(accessToken, id) => {
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    'Content-Type': 'application/json',
+  }
+
+  const response = await axios.get(`https://api.spotify.com/v1/playlists/${id}`, { headers })
+  return response
+}

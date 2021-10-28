@@ -12,6 +12,11 @@
             - [X] Menu
             - [X] Navigation
             - [X] Playlists
+        - [X] Footer
+            - [X] Player
+            - [X] Slider
+            - [X] Options
+            - [X] Song
         - [X] Card
         - [X] Content
         - [X] Dropdown
@@ -19,11 +24,6 @@
         - [X] Track
         - [X] Artist
         - [X] Profile Top
-        - [X] Footer
-            - [X] Player
-            - [X] Slider
-            - [X] Options
-            - [X] Song
     - [ ] Pages
         - [X] Home
         - [X] Login
@@ -33,13 +33,17 @@
         - [ ] Playlist
         - [X] Search
     - [X] Redux Store
-        - [X] Auth Reducer
-        - [X] User Reducer
-        - [X] Profile Reducer
-        - [X] Search Reducer
-        - [X] Profile Actions
-        - [X] User Actions
-        - [X] Search Actions
+        -[X] Reducers
+            - [X] Auth
+            - [X] User 
+            - [X] Profile 
+            - [X] Search 
+            - [X] Playlist 
+        -[X] Actions
+            - [X] Profile 
+            - [X] User 
+            - [X] Search 
+            - [X] Playlist 
     ---
     - [X] Sidabar Routing    
     - [X] Make Sidebar resizeable
