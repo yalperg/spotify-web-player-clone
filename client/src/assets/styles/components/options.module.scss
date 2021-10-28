@@ -1,0 +1,14 @@
+@import '../abstracts/mixins';
+@import '../abstracts//variables';
+
+.options {
+  @include player-item;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .8rem;
+
+  svg:hover {
+    color: #fff;
+  }
+}
