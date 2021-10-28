@@ -13,7 +13,7 @@
         - [X] Track
         - [X] Artist
         - [X] Profile Top
-        - [ ] Player
+        - [X] Footer
     - [ ] Pages
         - [X] Home
         - [X] Login
@@ -56,7 +56,7 @@
 ## Techs I used in this project
 
 * Reaact.js
-* SCSS
+* SASS/SCSS
 * Node.js
 * Express.js
 * Spotify Api

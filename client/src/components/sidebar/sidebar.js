@@ -7,7 +7,6 @@ import styles from 'assets/styles/layout/sidebar.module.scss'
 import Navigation from 'components/sidebar/navigation'
 import Menu from 'components/sidebar/menu'
 import Playlists from 'components/sidebar/playlists'
-import DownloadApp from './download'
 
 const Sidebar = () => {
   const [size, setSize] = useState()
@@ -47,7 +46,6 @@ const Sidebar = () => {
         <Navigation />
         <Menu />
         <Playlists />
-        <DownloadApp />
       </div>
       <div className={`${styles.resizebar} ${isMouseDown ? styles.active : ''}`} onMouseDown={downHandler}></div>
     </div>
