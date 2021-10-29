@@ -1,9 +1,22 @@
 # Spotify Web Player Clone 
 
+## Techs I used in this project
+
+* Reaact.js
+* SASS/SCSS
+* Node.js
+* Express.js
+* Spotify API
+
+## Packages
+* [colors.js](https://www.npmjs.com/package/color.js) to get average color from image.
+* [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) to get access and refresh tokens.
+
+
 ## Todos
 
-- [ ] Frontend
-    - [ ] Components
+- [X] Frontend
+    - [X] Components
         - [X] Header
             - [X] Navigation
             - [X] Searchbar
@@ -24,13 +37,13 @@
         - [X] Track
         - [X] Artist
         - [X] Profile Top
-    - [ ] Pages
+    - [X] Pages
         - [X] Home
         - [X] Login
         - [X] Profile
         - [X] Top Artists
         - [X] Top Tracks
-        - [ ] Playlist
+        - [X] Playlist
         - [X] Search
     - [X] Redux Store
         - [X] Reducers
@@ -65,16 +78,3 @@
   - [X] Connect Spotify API
   - [X] Login Router
   - [X] Refresh Router
-
-
-## Techs I used in this project
-
-* Reaact.js
-* SASS/SCSS
-* Node.js
-* Express.js
-* Spotify API
-
-## Packages
-* [colors.js](https://www.npmjs.com/package/color.js) to get average color from image.
-* [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) to get access and refresh tokens.
