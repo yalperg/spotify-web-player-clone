@@ -1,14 +1,14 @@
 {
-  "name": "spotify-clone-server",
+  "name": "spotify-web-player-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "A clone project of the Spotify Web Player.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Yunus Alper Göl<github.com/yuiji>",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

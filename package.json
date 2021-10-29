@@ -1,18 +1,14 @@
 {
-  "name": "spotify-clone",
+  "name": "spotify-web-player",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "A clone project of the Spotify Web Player.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuiji/spotify-web-player-clone.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Yunus Alper Göl<github.com/yuiji>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yuiji/spotify-web-player-clone/issues"
   },
