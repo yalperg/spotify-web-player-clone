@@ -7,6 +7,7 @@ import { playlistActions } from 'store/playlist-slice'
 
 import styles from 'assets/styles/layout/container.module.scss'
 import PlaylistTop from 'components/playlist-top'
+import Tracks from 'components/tracks'
 
 const Playlist = () => {
   const { id } = useParams()
@@ -20,10 +21,10 @@ const Playlist = () => {
     }
   }, [id, dispatch])
 
-  console.log(playlist)
   return ( 
     <div className={styles.container}>
       <PlaylistTop playlist={playlist} />
+      <Tracks tracks={playlist.tracks?.items} />
     </div>
    )
 }
