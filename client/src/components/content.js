@@ -1,8 +1,6 @@
 import { useState, useRef } from 'react'
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 
-import { average } from 'color.js'
-
 import Profile from 'views/profile'
 import Search from 'views/search'
 import Playlist from 'views/playlist'
@@ -28,7 +26,7 @@ const Content = () => {
   const background = {
     background: `linear-gradient(to bottom, ${bgColor}, ${bg.default}, ${bg.default}, ${bg.default})`,
   }
-
+  
   const scrollHandler = () => {
     let cord = (ref.current.scrollTop / 190).toFixed(2)
 
@@ -37,22 +35,6 @@ const Content = () => {
     } else {
       setOpacity(Number(cord))
     }
-  }
-
-  const mouseEnterHandler = url => {
-    average(url, { format: 'hex' }).then(color =>
-      setBg({
-        ...bg,
-        home: color,
-      })
-    )
-  }
-
-  const mouseLeaveHandler = () => {
-    setBg({
-      ...bg,
-      home: '#393639',
-    })
   }
 
   return (
@@ -65,8 +47,8 @@ const Content = () => {
       <Switch>
         <Route exact path='/'>
           <Home
-            mouseEnterHandler={mouseEnterHandler}
-            mouseLeaveHandler={mouseLeaveHandler}
+            bg={bg}
+            setBg={setBg}
           />
         </Route>
         <Route path='/search'>
