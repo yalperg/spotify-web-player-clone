@@ -8,7 +8,7 @@ const PlaylistTop = ( { playlist }) => {
       </div>
       <div className={styles.info}>
         <h2>PLAYLIST</h2>
-        <h1>{playlist.name}</h1>
+        <h1 style={playlist.name?.length > 50 ? {fontSize: '2.5rem'}: null}>{playlist.name}</h1>
         <div>
           <span>{playlist.owner?.display_name} </span>
           <span className={styles.time}>• {playlist.tracks?.items.length} songs</span>
