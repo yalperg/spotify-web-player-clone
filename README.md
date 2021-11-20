@@ -9,7 +9,7 @@
 
 ## Techs I used in this project
 
-* Reaact.js
+* React.js
 * SASS/SCSS
 * Node.js
 * Express.js
