@@ -1,12 +1,12 @@
 import Card from 'components/card'
 import styles from 'assets/styles/layout/section.module.scss'
 
-const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler }) => {
+const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler, fallbackMessage }) => {
   return (
     <section className={styles.section}>
       <h1>{title}</h1>
-      <div className={`${styles.cards} ${size === 'small' ? styles.small : styles.medium}`}>
-        {items.length ? items.map((item) => {
+      {Boolean(items.length) ? <div className={`${styles.cards} ${size === 'small' ? styles.small : styles.medium}`}>
+        {items.map((item) => {
           return (
             <Card
               key={item.id}
@@ -19,8 +19,8 @@ const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler }) =
               mouseLeaveHandler={mouseLeaveHandler}
             />
           )
-        }) : <h1>Loading...</h1>}
-      </div>
+        })}
+      </div> : <p className={styles.fallbackMessage}>{fallbackMessage}</p> }
     </section>
   )
 }

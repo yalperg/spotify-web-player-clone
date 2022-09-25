@@ -24,11 +24,13 @@ const Profile = () => {
     }
   }, [dispatch, userData, id])
 
+  const playlists = userData.info.id !== id ? profileData.playlists  : userData.playlists
+
   return (
     <>
       <PorfileTop info={userData.info.id !== id ? profileData.info : userData.info } />
       <div className={styles.container}>
-        <Section title='Public Playlists' items={userData.info.id !== id ? profileData.playlists  : userData.playlists.filter(playlist => playlist.public) } />
+        <Section title='Playlists' items={playlists} fallbackMessage={'There is no playlist to display.'} />
       </div>
     </>
   )
