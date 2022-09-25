@@ -1,4 +1,5 @@
 import styles from 'assets/styles/components/playlist-top.module.scss'
+import { NavLink } from 'react-router-dom'
 
 const PlaylistTop = ( { playlist }) => {
   return (
@@ -10,8 +11,8 @@ const PlaylistTop = ( { playlist }) => {
         <h2>PLAYLIST</h2>
         <h1 style={playlist.name?.length > 50 ? {fontSize: '2.5rem'}: null}>{playlist.name}</h1>
         <div>
-          <span>{playlist.owner?.display_name} </span>
-          <span className={styles.time}>• {playlist.tracks?.items.length} songs</span>
+          <NavLink to={`/user/${playlist.owner?.id}`} className={styles.owner}>{playlist.owner?.display_name}</NavLink>
+          <span className={styles.time}> • {playlist.tracks?.items.length} songs</span>
         </div>
       </div>
     </div>
