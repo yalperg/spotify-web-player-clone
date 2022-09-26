@@ -1,0 +1,77 @@
+@import 'styles/abstracts/variables';
+
+.nav {
+  color: $secondary-color;
+
+  ul {
+    margin-bottom: 1.5rem;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        height: 2.5rem;
+        border-radius: 5px;
+        color: inherit;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        padding-left: 0.9rem;
+
+        span {
+          margin-right: 0.9rem;
+          height: 24px;
+          width: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1px;
+
+          &.plus {
+            background-color: $secondary-color;
+          }
+
+          &.heart {
+            background-image: linear-gradient(135deg, #450af5, #c4efd9);
+            opacity: 80%;
+          }
+        }
+
+        &.active {
+          color: $primary-color;
+
+          span {
+            &.plus {
+              background-color: $primary-color;
+            }
+
+            &.heart {
+              opacity: 100%;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        a {
+          color: $primary-color;
+
+          span {
+            &.plus {
+              background-color: $primary-color;
+            }
+
+            &.heart {
+              opacity: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.border {
+  margin: 0 0.9rem;
+  border-bottom: 1px solid $third-color;
+}

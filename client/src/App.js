@@ -1,35 +1,32 @@
-import { useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import Sidebar from 'components/sidebar/sidebar'
-import Content from 'components/content'
-import Footer from 'components/footer/footer'
-import Login from 'views/login'
-import useAuth from 'hooks/useAuth'
+import Sidebar from 'components/Sidebar';
+import Content from 'components/Content';
+import Footer from 'components/Footer';
+import Login from 'views/Login';
+import useAuth from 'hooks/useAuth';
 
-import { useDispatch } from 'react-redux'
-import { getFeatured, getUser, getUsersPlaylists, getRecentTrack } from 'actions/user'
+import { useDispatch } from 'react-redux';
+import { getFeatured, getUser, getUsersPlaylists, getRecentTrack } from 'actions/user';
 
-import styles from 'assets/styles/app.module.scss'
+import styles from 'styles/app.module.scss';
 
 function App() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const authorizationCode = new URLSearchParams(window.location.search).get(
-    'code'
-  )
-  const isAuth = useAuth(authorizationCode)
+  const authorizationCode = new URLSearchParams(window.location.search).get('code');
+  const isAuth = useAuth(authorizationCode);
 
   useEffect(() => {
-    if(isAuth) {
-      dispatch(getUser())
-      dispatch(getUsersPlaylists())
-      dispatch(getFeatured())
-      dispatch(getRecentTrack())
+    if (isAuth) {
+      dispatch(getUser());
+      dispatch(getUsersPlaylists());
+      dispatch(getFeatured());
+      dispatch(getRecentTrack());
     }
-  }, [dispatch, isAuth])
+  }, [dispatch, isAuth]);
 
-  
   return (
     <div className={styles.app}>
       {!isAuth ? (
@@ -44,7 +41,7 @@ function App() {
         </Router>
       )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

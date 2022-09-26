@@ -1,0 +1,24 @@
+@import 'styles/abstracts/variables';
+
+.download {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  border-radius: 5px;
+  color: $secondary-color;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 0.9rem;
+
+  span {
+    margin-top: .3rem;
+    margin-right: 0.9rem;
+  }
+
+  &.active {
+    color: $primary-color;
+    background-color: $third-color;
+  }
+}
