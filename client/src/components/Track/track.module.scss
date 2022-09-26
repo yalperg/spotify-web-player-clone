@@ -1,0 +1,13 @@
+@import 'styles/abstracts/mixins';
+
+.track {
+  @include tops-item;
+}
+
+.search {
+  height: 2.5rem !important;
+
+  img {
+    width: 2.5rem !important;
+  }
+}
