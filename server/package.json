@@ -4,7 +4,7 @@
   "description": "A clone project of the Spotify Web Player.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Yunus Alper Göl<github.com/yuiji>",
