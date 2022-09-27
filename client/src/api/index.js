@@ -1,91 +1,37 @@
-import axios from 'axios'
+import instance from './axiosConfig';
 
-export const fecthUser = async accessToken => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
+export const fecthUser = () => {
+  return instance.get('me/');
+};
 
-  const response = await axios.get('https://api.spotify.com/v1/me/', { headers })
-  return response
-}
+export const fetchUsersPlaylists = () => {
+  return instance.get('me/playlists');
+};
 
-export const fetchUsersPlaylists = async accessToken => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
+export const fetchUsersTops = type => {
+  return instance.get(`me/top/${type}?limit=50&time_range=long_term`);
+};
 
-  const response = await axios.get('https://api.spotify.com/v1/me/playlists', { headers })
-  return response
-}
+export const fetchFeatured = () => {
+  return instance.get(`browse/featured-playlists`);
+};
 
-export const fetchUsersTops = async (accessToken, type) => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
+export const fetchProfile = id => {
+  return instance.get(`users/${id}`);
+};
 
-  const response = await axios.get(`https://api.spotify.com/v1/me/top/${type}?limit=50&time_range=long_term`, { headers })
-  return response
-}
+export const fetchProfilePlaylists = id => {
+  return instance.get(`users/${id}/playlists`);
+};
 
-export const fetchFeatured = async accessToken => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
+export const search = query => {
+  return instance.get(`search?q=${query}&type=artist,album,track`);
+};
 
-  const response = await axios.get(`https://api.spotify.com/v1/browse/featured-playlists`, { headers })
-  return response
-}
+export const fetchRecentTrack = () => {
+  return instance.get(`me/player/recently-played?limit=1`);
+};
 
-export const fetchProfile = async (accessToken, id) => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
-
-  const response = await axios.get(`https://api.spotify.com/v1/users/${id}`, { headers })
-  return response
-}
-
-export const fetchProfilePlaylists = async (accessToken, id) => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
-
-  const response = await axios.get(`https://api.spotify.com/v1/users/${id}/playlists`, { headers })
-  return response
-}
-
-export const search = async (accessToken, query) => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
-
-  const response = await axios.get(`https://api.spotify.com/v1/search?q=${query}&type=artist,album,track`, { headers })
-  return response
-}
-
-export const fetchRecentTrack = async(accessToken) => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
-
-  const response = await axios.get(`https://api.spotify.com/v1/me/player/recently-played?limit=1`, { headers })
-  return response
-}
-
-export const fetchPlaylist = async(accessToken, id) => {
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    'Content-Type': 'application/json',
-  }
-
-  const response = await axios.get(`https://api.spotify.com/v1/playlists/${id}`, { headers })
-  return response
-}
+export const fetchPlaylist = id => {
+  return instance.get(`playlists/${id}`);
+};

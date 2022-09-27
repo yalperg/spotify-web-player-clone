@@ -1,58 +1,47 @@
-import * as api from 'api'
-import { userActions } from 'store/user-slice'
+import * as api from 'api';
+import { userActions } from 'store/user-slice';
 
 export const getUser = () => async dispatch => {
-  const accessToken = sessionStorage.getItem('access_token')
-
   try {
-    const { data } = await api.fecthUser(accessToken)
-    dispatch(userActions.replaceUser(data))
+    const { data } = await api.fecthUser();
+    dispatch(userActions.replaceUser(data));
   } catch (error) {
-    console.log(error.message)
+    console.log(error.message);
   }
-}
+};
 
 export const getUsersPlaylists = () => async dispatch => {
-  const accessToken = sessionStorage.getItem('access_token')
-
   try {
-    const { data } = await api.fetchUsersPlaylists(accessToken) 
-    dispatch(userActions.replacePlaylists(data))
+    const { data } = await api.fetchUsersPlaylists();
+    dispatch(userActions.replacePlaylists(data));
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};
 
-export const getUsersTops = (type) => async dispatch => {
-  const accessToken = sessionStorage.getItem('access_token')
-
+export const getUsersTops = type => async dispatch => {
   try {
-    const { data } = await api.fetchUsersTops(accessToken, type) 
-    dispatch(userActions.replaceTops({data, type: type}))
+    const { data } = await api.fetchUsersTops(type);
+    dispatch(userActions.replaceTops({ data, type: type }));
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};
 
 export const getFeatured = () => async dispatch => {
-  const accessToken = sessionStorage.getItem('access_token')
-
   try {
-    const { data } = await api.fetchFeatured(accessToken) 
-    dispatch(userActions.replaceFeatured(data))
+    const { data } = await api.fetchFeatured();
+    dispatch(userActions.replaceFeatured(data));
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};
 
 export const getRecentTrack = () => async dispatch => {
-  const accessToken = sessionStorage.getItem('access_token')
-
   try {
-    const { data } = await api.fetchRecentTrack(accessToken)
-    dispatch(userActions.replaceRecentTrack(data))
+    const { data } = await api.fetchRecentTrack();
+    dispatch(userActions.replaceRecentTrack(data));
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
-
+};
