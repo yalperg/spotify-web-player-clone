@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router';
 import { useState, useRef, useEffect } from 'react';
-import { DownIcon, UpIcon, UserIcon } from 'assets/icons/icons';
+import { DownIcon, UpIcon, UserIcon } from 'assets/icons';
 import styles from './header.module.scss';
 import Dropwdown from 'components/Dropdown';
 import CollectionNav from 'components/Header/components/CollectionNav';

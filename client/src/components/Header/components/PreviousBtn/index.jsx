@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router';
-import { PreviousIcon } from 'assets/icons/icons';
+import { PreviousIcon } from 'assets/icons';
 
 const PreviousBtn = () => {
   const history = useHistory();

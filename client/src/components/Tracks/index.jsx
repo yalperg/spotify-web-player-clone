@@ -1,5 +1,5 @@
 import styles from './tracks.module.scss';
-import Track from 'components/Track/track';
+import Track from 'components/Track';
 
 const Tracks = ({ tracks }) => {
   tracks = tracks?.map(track => track.track);

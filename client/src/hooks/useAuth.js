@@ -1,22 +1,17 @@
-import { useEffect } from 'react'
-import { useSelector } from 'react-redux'
-import axios from 'axios'
-import dotenv from 'dotenv'
-
-dotenv.config()
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 const useAuth = authorizationCode => {
-  const { accessToken, refreshToken, istokenExpired } = useSelector(
-    state => state.auth
-  )
+  const { accessToken, refreshToken, istokenExpired } = useSelector(state => state.auth);
 
   useEffect(() => {
-    if (!authorizationCode) return
+    if (!authorizationCode) return;
 
     if (!accessToken) {
       axios
         .post(
-          `${process.env.REACT_APP_SERVER_URI}/login`,
+          `${import.meta.env.VITE_SERVER_URI}/login`,
           { Authorization: authorizationCode },
           {
             headers: {
@@ -25,22 +20,22 @@ const useAuth = authorizationCode => {
           }
         )
         .then(res => {
-          sessionStorage.setItem('access_token', res.data.accessToken)
-          sessionStorage.setItem('refresh_token', res.data.refreshToken)
-          sessionStorage.setItem('timestamp', Date.now())
+          sessionStorage.setItem('access_token', res.data.accessToken);
+          sessionStorage.setItem('refresh_token', res.data.refreshToken);
+          sessionStorage.setItem('timestamp', Date.now());
 
-          window.location = '/'
+          window.location = '/';
         })
         .catch(err => {
-          console.log(err)
-          window.location = '/'
-        })
+          console.log(err);
+          window.location = '/';
+        });
     }
 
     if (istokenExpired) {
       axios
         .post(
-          `${process.env.REACT_APP_SERVER_URI}/refresh`,
+          `${import.meta.env.VITE_SERVER_URI}/refresh`,
           { RefreshToken: refreshToken },
           {
             headers: {
@@ -49,19 +44,19 @@ const useAuth = authorizationCode => {
           }
         )
         .then(res => {
-          sessionStorage.setItem('access_token', res.data.accessToken)
-          sessionStorage.setItem('timestamp', Date.now())
+          sessionStorage.setItem('access_token', res.data.accessToken);
+          sessionStorage.setItem('timestamp', Date.now());
 
-          window.location = '/'
+          window.location = '/';
         })
         .catch(err => {
-          console.log(err)
-          window.location = '/'
-        })
+          console.log(err);
+          window.location = '/';
+        });
     }
-  }, [authorizationCode, accessToken, istokenExpired, refreshToken])
+  }, [authorizationCode, accessToken, istokenExpired, refreshToken]);
 
-  return !!accessToken
-}
+  return !!accessToken;
+};
 
-export default useAuth
+export default useAuth;

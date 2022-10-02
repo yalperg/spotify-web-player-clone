@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Track from 'components/Track/track';
+import Track from 'components/Track';
 import styles from 'styles/layout/section.module.scss';
 
 const TracksSection = ({ title, items }) => {
