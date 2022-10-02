@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsersTops } from 'actions/user';
-import Track from 'components/Track/track';
+import Track from 'components/Track';
 
 import styles from 'styles/layout/container.module.scss';
 

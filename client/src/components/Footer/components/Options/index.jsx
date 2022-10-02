@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './options.module.scss';
-import { AddIcon, ConnectIcon, VolumeIcon } from 'assets/icons/icons';
+import { AddIcon, ConnectIcon, VolumeIcon } from 'assets/icons';
 import Slider from 'components/Footer/components/Slider';
 
 const Options = () => {

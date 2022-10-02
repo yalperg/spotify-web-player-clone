@@ -7,7 +7,7 @@ import { playlistActions } from 'store/playlist-slice';
 
 import styles from 'styles/layout/container.module.scss';
 import PlaylistTop from 'components/PlaylistTop';
-import Tracks from 'components/Tracks/tracks';
+import Tracks from 'components/Tracks';
 
 const Playlist = () => {
   const { id } = useParams();

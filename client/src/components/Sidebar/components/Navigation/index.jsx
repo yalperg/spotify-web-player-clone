@@ -7,7 +7,7 @@ import {
   SearchIconActive,
   CollectionIcon,
   CollectionIconActive,
-} from 'assets/icons/icons'
+} from 'assets/icons'
 
 const Navigation = () => {
   const location = useLocation()

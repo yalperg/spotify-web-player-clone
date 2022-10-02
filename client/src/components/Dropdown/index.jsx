@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './dropdown.module.scss';
-import { ExternalLinkIcon } from 'assets/icons/icons';
+import { ExternalLinkIcon } from 'assets/icons';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from 'store/auth-slice';

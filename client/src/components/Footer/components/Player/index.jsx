@@ -8,7 +8,7 @@ import {
   PrevSongIcon,
   RepeatIcon,
   ShuffleIcon,
-} from 'assets/icons/icons';
+} from 'assets/icons';
 import Slider from 'components/Footer/components/Slider';
 
 const Player = () => {

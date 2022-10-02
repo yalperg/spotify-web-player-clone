@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { PlayerHeartIcon, PlayerComputerIcon } from 'assets/icons/icons';
+import { PlayerHeartIcon, PlayerComputerIcon } from 'assets/icons';
 import styles from './song.module.scss';
 
 const Song = () => {

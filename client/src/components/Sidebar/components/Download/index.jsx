@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styles from './download.module.scss';
-import { DownloadIcon } from 'assets/icons/icons';
+import { DownloadIcon } from 'assets/icons';
 
 const DownloadApp = () => {
   return (

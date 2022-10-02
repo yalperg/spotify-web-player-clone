@@ -1,5 +1,5 @@
 import styles from './profile-top.module.scss'
-import { ProfileIcon } from 'assets/icons/icons'
+import { ProfileIcon } from 'assets/icons'
 
 const PorfileTop = ({ info }) => {
   return (
