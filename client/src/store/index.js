@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 
-import authSlice from 'store/auth-slice'
-import userSlice from 'store/user-slice'
-import profileSlice from 'store/profile-slice'
-import searchSlice from 'store/search-slice'
-import playlistSlice from 'store/playlist-slice'
+import authSlice from 'store/auth-slice';
+import userSlice from 'store/user-slice';
+import profileSlice from 'store/profile-slice';
+import searchSlice from 'store/search-slice';
+import playlistSlice from 'store/playlist-slice';
 
 const store = configureStore({
   reducer: {
@@ -14,6 +14,6 @@ const store = configureStore({
     search: searchSlice,
     playlist: playlistSlice,
   },
-})
+});
 
-export default store
+export default store;

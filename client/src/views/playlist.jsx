@@ -21,12 +21,12 @@ const Playlist = () => {
     }
   }, [id, dispatch])
 
-  return ( 
+  return (
     <div className={styles.container}>
       <PlaylistTop playlist={playlist} />
       <Tracks tracks={playlist.tracks?.items} />
     </div>
-   )
+  )
 }
- 
+
 export default Playlist
