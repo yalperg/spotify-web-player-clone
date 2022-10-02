@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { HeartIcon, PlusIcon } from 'assets/icons/icons';
+import { HeartIcon, PlusIcon } from 'assets/icons';
 import styles from './menu.module.scss';
 
 const Menu = () => {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './search-bar.module.scss';
-import { SearchIcon } from 'assets/icons/icons';
+import { SearchIcon } from 'assets/icons';
 import { useDispatch } from 'react-redux';
 import { searchData } from 'actions/search';
 import { searchActions } from 'store/search-slice';

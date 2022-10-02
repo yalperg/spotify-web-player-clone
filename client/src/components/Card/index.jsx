@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './card.module.scss'
-import { PauseIcon, PlayIcon, ProfileIcon } from 'assets/icons/icons'
+import { PauseIcon, PlayIcon, ProfileIcon } from 'assets/icons'
 
 const Card = ({
   id,
