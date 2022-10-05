@@ -79,6 +79,7 @@
     - [X] Search users, artists or songs
     - [X] Responsive
     - [X] Get User's Recently Played Track
+    - [X] Export playlist as a csv file
    
 - [X] Backend
   - [X] Express Configurations
