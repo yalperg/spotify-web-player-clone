@@ -69,4 +69,15 @@
     font-size: 0.875rem;
     font-weight: 500;
   }
+
+  .nameSection {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    
+    .downloadBtn {
+      color: #fff;
+      height: 20px;
+    }
+  }
 }
