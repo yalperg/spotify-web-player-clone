@@ -41,7 +41,6 @@
 
   h1 {
     font-size: 5rem;
-    padding: 0.08em 0px;
     letter-spacing: -.04rem;
 
     /* like a text-overflow: ellipsis*/
@@ -51,6 +50,13 @@
     overflow: hidden;
     word-break: break-all;
     white-space: unset;
+  }
+
+  .description {
+    color: rgba(255,255,255,.7);
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 0.1rem;
   }
 
   .owner {
