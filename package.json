@@ -12,5 +12,10 @@
   "bugs": {
     "url": "https://github.com/yuiji/spotify-web-player-clone/issues"
   },
-  "homepage": "https://github.com/yuiji/spotify-web-player-clone#readme"
+  "homepage": "https://github.com/yuiji/spotify-web-player-clone#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "husky": "^8.0.1"
+  }
 }
