@@ -29,12 +29,8 @@ const Content = () => {
 
   const scrollHandler = () => {
     let cord = (ref.current.scrollTop / 190).toFixed(2);
-
-    if (Number(cord) > 1) {
-      setOpacity(1);
-    } else {
-      setOpacity(Number(cord));
-    }
+    cord > 1 ? setOpacity(1) : setOpacity(cord);
+    ;
   };
 
   return (

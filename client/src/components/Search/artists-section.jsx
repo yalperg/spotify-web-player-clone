@@ -6,11 +6,7 @@ const ArtistsSection = ({ title, items }) => {
   const [limit, setLimit] = useState(7);
 
   const onClickHandler = () => {
-    if (limit === 7) {
-      setLimit(20);
-    } else {
-      setLimit(7);
-    }
+    limit === 7 ? setLimit(items.length) : setLimit(7);
   };
 
   return (
