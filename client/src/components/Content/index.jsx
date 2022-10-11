@@ -10,7 +10,7 @@ import Tracks from 'views/TopTracks';
 
 import Header from 'components/Header';
 
-import styles from 'styles/layout/content.module.scss';
+import styles from './content.module.scss';
 
 const Content = () => {
   const [opacity, setOpacity] = useState();

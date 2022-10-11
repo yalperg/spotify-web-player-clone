@@ -5,9 +5,9 @@ import { getPlaylist } from 'actions/playlist';
 
 import { playlistActions } from 'store/playlist-slice';
 
-import styles from 'styles/layout/container.module.scss';
 import PlaylistTop from 'components/PlaylistTop';
 import Tracks from 'components/Tracks';
+import Container from 'components/Container';
 
 const Playlist = () => {
   const { id } = useParams();
@@ -22,10 +22,10 @@ const Playlist = () => {
   }, [id, dispatch]);
 
   return (
-    <div className={styles.container}>
+    <Container>
       <PlaylistTop playlist={playlist} />
       <Tracks tracks={playlist.tracks?.items} />
-    </div>
+    </Container>
   );
 };
 

@@ -1,5 +1,5 @@
 import Card from 'components/Card';
-import styles from 'styles/layout/section.module.scss';
+import styles from './section.module.scss';
 
 const Section = ({ title, items, size, mouseEnterHandler, mouseLeaveHandler, fallbackMessage }) => {
   return (

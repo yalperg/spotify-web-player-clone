@@ -5,7 +5,7 @@ import { getProfile, getProfilePlaylists } from 'actions/profile';
 import { profileActions } from 'store/profile-slice';
 import PorfileTop from 'components/ProfileTop';
 import Section from 'components/Section';
-import styles from 'styles/layout/container.module.scss';
+import Container from 'components/Container';
 
 const Profile = () => {
   const userData = useSelector(state => state.user);
@@ -29,13 +29,13 @@ const Profile = () => {
   return (
     <>
       <PorfileTop info={userData.info.id !== id ? profileData.info : userData.info} />
-      <div className={styles.container}>
+      <Container>
         <Section
           title='Playlists'
           items={playlists}
           fallbackMessage={'There is no playlist to display.'}
         />
-      </div>
+      </Container>
     </>
   );
 };

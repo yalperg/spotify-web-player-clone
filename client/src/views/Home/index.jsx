@@ -1,8 +1,7 @@
-import styles from 'styles/layout/container.module.scss';
 import Section from 'components/Section';
+import Container from 'components/Container';
 import greetings from 'functions/greetings';
 import { average } from 'color.js';
-
 import { useSelector } from 'react-redux';
 
 const Home = ({ bg, setBg }) => {
@@ -26,7 +25,7 @@ const Home = ({ bg, setBg }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <Container>
       <Section
         title={greeting}
         items={playlists}
@@ -36,7 +35,7 @@ const Home = ({ bg, setBg }) => {
       />
       <Section title='Your Playlists' items={playlists} size='medium' />
       <Section title="Editor's picks" items={featured} size='medium' />
-    </div>
+    </Container>
   );
 };
 

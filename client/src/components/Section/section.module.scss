@@ -1,0 +1,45 @@
+.section {
+  .cards {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
+    gap: 1.5rem;
+    margin: 1.5rem 0 5rem 0;
+  }
+
+  .small {
+    grid-template-columns: repeat(auto-fill,minmax(18.75rem,1fr));
+  }
+
+  .medium {
+    grid-template-columns: repeat(auto-fill,minmax(12.5rem,1fr));
+    
+
+    @media screen and (max-width: 744px) {
+      justify-items: center;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  span {
+    color: #7f7f7f;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
+.fallbackMessage {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #7f7f7f;
+}
